@@ -1,4 +1,4 @@
-import { SetStateAction, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 
 export function Home () {
@@ -10,6 +10,12 @@ export function Home () {
 
 
     const [selectedPillar, setSelectedPillar] = useState<string | null>(null);
+
+    const pillarHeaders: { [key: string]: string } = {
+        outreach: 'OUTREACH',
+        professional: 'PROFESSIONAL DEVELOPMENT',
+        community: 'COMMUNITY',
+      };
 
     const pillarData: { [key: string]: string } = {
         outreach: 'Filler text for Outreach section.',
@@ -25,6 +31,17 @@ export function Home () {
         setSelectedPillar(null);
     };
 
+    const dropdownContentRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        if (selectedPillar && dropdownContentRef.current) {
+        dropdownContentRef.current.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+        }
+    }, [selectedPillar]);
+
     return (
         <div className='home-container h-full w-screen'>
 
@@ -34,7 +51,7 @@ export function Home () {
                 style={{
                     backgroundImage: `url(${'/images/home-image-crop.jpeg'})`,
                     backgroundSize: 'cover',
-                    filter: 'grayscale(60%)',
+                    filter: 'grayscale(70%)',
                 }}
                 >
                     <div
@@ -74,7 +91,7 @@ export function Home () {
                             height: '40%',
                         }}/> 
                     <div className="chapter-info-text w-1/3 flex flex-col ml-32 text-center">
-                        <h1 className="text-slate-900 inline-block text-6xl mb-16 px-12 py-4 border-4 border-slate-800">OUR CHAPTER</h1>
+                        <h1 className="text-slate-900 inline-block text-5xl font-bold mb-16 px-12 py-3 bg-white border-4 border-slate-800">OUR CHAPTER</h1>
                         <p className="text-xl">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
                             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -82,9 +99,9 @@ export function Home () {
                         </p>
                     </div>
                 </div>
-                <div className="mission-info-container bg-slate-400 py-16 flex flex-col text-center">
-                    <h1 className="text-slate-900 text-6xl font-bold mb-8"> OUR MISSION </h1>
-                    <p className="w-1/2 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                <div className="mission-info-container bg-slate-500 py-16 flex flex-col text-center text-white">
+                    <h1 className=" text-5xl font-bold mb-8"> OUR MISSION </h1>
+                    <p className="w-1/2 mx-auto text-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
                         ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
@@ -94,13 +111,22 @@ export function Home () {
 
             <div className="pillars-container w-screen py-16 font-oswald text-center"
             style={backgroundStyle}>
-                <h1 className="text-slate-900 inline-block text-6xl mb-16 px-12 py-4 border-4 border-slate-800">OUR PILLARS</h1>
+                <h1 className="text-slate-900 inline-block text-5xl font-bold mb-16 px-12 py-3 bg-white border-4 border-slate-800">OUR PILLARS</h1>
                 <div className="pillars-menu-horizontal mx-16 flex flex-row justify-between">
                     <div className="pillar-item flex flex-col">
-                        <img src="/images/outreach-new.jpeg" alt="image" className="object-cover rounded-full shadow-lg mb-4"/>
+                        <div
+                        className='relative'
+                        onClick={() => handlePillarButtonClick('outreach')}
+                        >
+                            <img
+                                src='/images/outreach-new.jpeg'
+                                alt='image'
+                                className='object-cover rounded-full shadow-lg mb-4 transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                            />
+                        </div>
                         <button
                             className={`inline-block border-4 border-slate-800 bg-white cursor-pointer px-4 py-3 text-center text-md 
-                            font-bold text-slate-800 transition duration-200 ease-in-out hover:filter hover:brightness-80`}
+                            font-bold text-slate-800`}
                             onClick={() => handlePillarButtonClick('outreach')}
                             >
                             OUTREACH
@@ -108,10 +134,19 @@ export function Home () {
                        
                     </div>
                     <div className="pillar-item flex flex-col">
-                        <img src="/images/professional-new.jpeg" alt="image" className="object-cover rounded-full shadow-lg mb-4"/>
+                        <div
+                        className='relative'
+                        onClick={() => handlePillarButtonClick('professional')}
+                        >
+                            <img
+                                src='/images/professional-new.jpeg'
+                                alt='image'
+                                className='object-cover rounded-full shadow-lg mb-4 transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                            />
+                        </div>
                         <button
                             className={`inline-block border-4 border-slate-800 bg-white cursor-pointer px-4 py-3 text-center text-md 
-                            font-bold text-slate-800 transition duration-200 ease-in-out hover:filter hover:brightness-80`}
+                            font-bold text-slate-800`}
                             onClick={() => handlePillarButtonClick('professional')}
                             >
                             PROFESSIONAL DEVELOPMENT
@@ -119,10 +154,19 @@ export function Home () {
                         
                     </div>
                     <div className="pillar-item flex flex-col">
-                        <img src="/images/community-new.jpeg" alt="image" className="object-cover rounded-full shadow-lg mb-4" />
+                        <div
+                        className='relative'
+                        onClick={() => handlePillarButtonClick('community')}
+                        >
+                            <img
+                                src='/images/community-new.jpeg'
+                                alt='image'
+                                className='object-cover rounded-full shadow-lg mb-4 transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                            />
+                        </div>
                         <button
                             className={`inline-block border-4 border-slate-800 bg-white cursor-pointer px-4 py-3 text-center text-md 
-                            font-bold text-slate-800 transition duration-200 ease-in-out hover:filter hover:brightness-80`}
+                            font-bold text-slate-800`}
                             onClick={() => handlePillarButtonClick('community')}
                             >
                             COMMUNITY
@@ -132,11 +176,12 @@ export function Home () {
                 </div>
             </div>
 
-            <div className={`dropdown-content w-full bg-white transform transition-transform duration-700 ${selectedPillar ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+            <div ref={dropdownContentRef} 
+                className={`dropdown-content w-full bg-white transform transition-transform duration-700 ${selectedPillar ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
                 {selectedPillar && (
                 <div className='mb-8 px-4 py-6 mx-auto'>
-                    <div className='dropdown-text-container mx-16'>
-                        <h1 className='text-slate-900 text-3xl font-bold mb-4'>{selectedPillar.toUpperCase()}</h1>
+                    <div className='dropdown-text-container mx-16 font-oswald'>
+                        <h1 className='text-slate-900 text-3xl font-bold mb-4'>{pillarHeaders[selectedPillar]}</h1>
                         <p className='text-slate-800'>{pillarData[selectedPillar]}</p>
                         <button
                             className='mt-4 px-4 py-2 text-white bg-slate-800 font-semibold hover:bg-opacity-75 transition duration-200'
