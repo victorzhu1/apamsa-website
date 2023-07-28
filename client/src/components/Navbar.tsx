@@ -1,31 +1,39 @@
 
 export default function Navbar() {
   return (
-    <nav className="absolute w-full flex items-center justify-center dark:bg-gray-900 text-white font-rubik" style={{ zIndex: 1 }}>
+    <nav className="absolute w-full flex items-center justify-center dark:bg-gray-900 text-white font-oswald" style={{ zIndex: 1 }}>
         <div className="navbar-menu-items">
-          <ul className="menu my-2 menu-horizontal space-x-20 text-3xl">
-            <li><a href='/' className='no-underline font-bold'>HOME</a></li>
+          <ul className="menu my-2 menu-horizontal flex justify-between space-x-24 text-2xl">
+            <li><a href='/' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>HOME</a></li>
             <li>
-              <a className='no-underline font-bold'>ABOUT</a>
-              <ul className="p-2 absolute bg-gray-100 bg-opacity-25 shadow rounded-md text-lg">
-                <li><a href='/coursesearch' className='no-underline'>OVERVIEW</a></li>
-                <li><a href='/research' className='no-underline'>EXEC BOARD</a></li>
+              <a className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>ABOUT</a>
+              <ul className="w-36 p-2 absolute bg-gray-100 bg-opacity-25 shadow text-lg">
+                <li><a href='/coursesearch' className='p-2 hover:bg-blue-100 hover:bg-opacity-25 duration-150'>OVERVIEW</a></li>
+                <li><a href='/research' className='p-2 hover:bg-blue-100 hover:bg-opacity-25 duration-150'>EXEC BOARD</a></li>
               </ul>
             </li>
 
+            <li><a href='/announcements' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>MEMBERS</a></li>
+
+
             <li>
-            <a href="/" className="flex items-center no-underline rounded-md hover:bg-blue-100 hover:bg-opacity-25 p-2 transition-colors duration-150">
+            <a href="/" className="flex items-center rounded-md hover:bg-blue-100 hover:bg-opacity-25 p-2 duration-150">
               <img src="/images/image-logo-small.jpg" className="h-12" alt="Logo" />
             </a>
             </li>
-            <li><a href='/announcements' className='no-underline font-bold'>EVENTS</a></li>
+
+            <li><a href='/announcements' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>EVENTS</a></li>
+
             <li>
-              <a className='no-underline font-bold'>RESOURCES</a>
-              <ul className="p-2 absolute bg-gray-100 bg-opacity-25 shadow rounded-md text-lg">
-                <li><a href='/coursesearch' className='no-underline'>COURSE SEARCH</a></li>
-                <li><a href='/research' className='no-underline'>MORE</a></li>
+              <a className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>RESOURCES</a>
+              <ul className="w-48 p-2 absolute bg-gray-100 bg-opacity-25 shadow text-lg">
+                <li><a href='/coursesearch' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>COURSE SEARCH</a></li>
+                <li><a href='/research' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>MORE</a></li>
               </ul>
             </li>
+
+            <li><a href='/announcements' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>JOIN US</a></li>
+
           </ul>
         </div>
     </nav>

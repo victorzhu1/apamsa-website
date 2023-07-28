@@ -48,7 +48,7 @@ export const CourseSearch = (): JSX.Element => {
   };
 
   return (
-    <section className="bg-white text-blue-900 my-16 min-h-screen w-screen font-sans shadow">
+    <section className="bg-white text-blue-900 min-h-screen w-screen font-primary shadow">
       <div className="container flex flex-col items-center justify-center mx-auto h-full overflow-auto py-16">
         <h1 className="text-4xl font-bold mb-4">Course Search</h1>
         <p className="text-lg mb-2">Enter a query for courses:</p>
