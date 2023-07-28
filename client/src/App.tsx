@@ -4,8 +4,9 @@ import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Announcements } from './pages/Announcements';
 import { CourseSearch } from './pages/CourseSearch';
-import { ResearchSearch } from './pages/ResearchSearch';
+import { More } from './pages/More';
 import Footer from './components/Footer';
+
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/announcements' element={<Announcements />} />
           <Route path='/coursesearch' element={<CourseSearch />} />
-          <Route path='/research' element={<ResearchSearch />} />
+          <Route path='/research' element={<More />} />
         </Routes>
       </div>
       <Footer/>
