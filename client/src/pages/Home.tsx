@@ -121,7 +121,7 @@ export function Home () {
                             <img
                                 src='/images/outreach-new.jpeg'
                                 alt='image'
-                                className='object-cover rounded-full shadow-lg mb-4 transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                                className='rounded-full shadow-lg mb-4 transition-transform transform-gpu hover:scale-105 cursor-pointer'
                             />
                         </div>
                         <button
@@ -141,7 +141,7 @@ export function Home () {
                             <img
                                 src='/images/professional-new.jpeg'
                                 alt='image'
-                                className='object-cover rounded-full shadow-lg mb-4 transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                                className='rounded-full shadow-lg mb-4 transition-transform transform-gpu hover:scale-105 cursor-pointer'
                             />
                         </div>
                         <button
@@ -161,7 +161,7 @@ export function Home () {
                             <img
                                 src='/images/community-new.jpeg'
                                 alt='image'
-                                className='object-cover rounded-full shadow-lg mb-4 transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                                className='rounded-full shadow-lg mb-4 transition-transform transform-gpu hover:scale-105 cursor-pointer'
                             />
                         </div>
                         <button
@@ -177,7 +177,7 @@ export function Home () {
             </div>
 
             <div ref={dropdownContentRef} 
-                className={`dropdown-content w-full bg-white transform transition-transform duration-700 ${selectedPillar ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+                className={`dropdown-content w-full bg-white }`}>
                 {selectedPillar && (
                 <div className='mb-8 px-4 py-6 mx-auto'>
                     <div className='dropdown-text-container mx-16 font-oswald'>
@@ -190,8 +190,6 @@ export function Home () {
                             CLOSE
                         </button>
                     </div>
-
-                    
                 </div>
                 )}
             </div>
