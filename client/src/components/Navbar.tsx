@@ -7,9 +7,9 @@ export default function Navbar() {
             <li><a href='/' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>HOME</a></li>
             <li>
               <a className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>ABOUT</a>
-              <ul className="w-36 p-2 absolute bg-gray-100 bg-opacity-25 shadow text-lg">
-                <li><a href='/coursesearch' className='p-2 hover:bg-blue-100 hover:bg-opacity-25 duration-150'>OVERVIEW</a></li>
-                <li><a href='/research' className='p-2 hover:bg-blue-100 hover:bg-opacity-25 duration-150'>EXEC BOARD</a></li>
+              <ul className="w-36 p-2 absolute bg-gray-400 shadow text-lg">
+                <li><a href='/overview' className='p-2 hover:bg-blue-100 hover:bg-opacity-25 duration-150'>OVERVIEW</a></li>
+                <li><a href='/exec' className='p-2 hover:bg-blue-100 hover:bg-opacity-25 duration-150'>EXEC BOARD</a></li>
               </ul>
             </li>
 
@@ -22,17 +22,17 @@ export default function Navbar() {
             </a>
             </li>
 
-            <li><a href='/announcements' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>EVENTS</a></li>
+            <li><a href='/events' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>EVENTS</a></li>
 
             <li>
               <a className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>RESOURCES</a>
-              <ul className="w-48 p-2 absolute bg-gray-100 bg-opacity-25 shadow text-lg">
+              <ul className="w-48 p-2 absolute bg-gray-400 shadow text-lg">
                 <li><a href='/coursesearch' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>COURSE SEARCH</a></li>
-                <li><a href='/research' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>MORE</a></li>
+                <li><a href='/more' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>MORE</a></li>
               </ul>
             </li>
 
-            <li><a href='/announcements' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>JOIN US</a></li>
+            <li><a href='/join' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>JOIN US</a></li>
 
           </ul>
         </div>

@@ -16,7 +16,7 @@ export default function Footer() {
   };
   
   return (
-    <footer className='footer-container py-16 px-64 bg-slate-600 text-white font-oswald'>
+    <footer className='footer-container py-16 px-64 bg-slate-700 text-white font-oswald'>
         <div className='flex flex-row items-center justify-between'>
             <div className='logo-container flex flex-col items-center justify-center'>
               <img src="/images/image-logo-small.jpg" className="h-16" alt="Logo" />
