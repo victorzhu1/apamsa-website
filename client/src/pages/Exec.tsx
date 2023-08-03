@@ -1,6 +1,46 @@
+import { useEffect, useState, useRef } from "react";
+
+
+
+
 export function Exec() {
+
+    const [selectedMember, setSelectedMember] = useState<string | null>(null);
+
+    const memberNames: { [key: string]: string } = {
+        a: 'HAYLE KIM',
+        b: 'STACY LIANG',
+        c: 'JEFF REN',
+    };
+
+    const memberInfo: { [key: string]: string } = {
+        a: 'Filler text for Hayle Kim.',
+        b: 'Filler text for Stacy Liang.',
+        c: 'Filler text for Jeff Ren.',
+    };
+
+    const handleMemberButtonClick = (member: string) => {
+        setSelectedMember(member);
+    };
+
+    const handleCloseButtonClick = () => {
+        setSelectedMember(null);
+    };
+
+    const dropdownContentRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        if (selectedMember && dropdownContentRef.current) {
+        dropdownContentRef.current.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+        }
+    }, [selectedMember]);
+
+
     return (
-        <div className='exec-container h-full w-screen flex flex-col items-center justify-center'>
+        <div className='exec-container h-full w-screen flex flex-col items-center justify-center font-oswald'>
             <div className='exec-header w-full bg-slate-700'>
                 <div className='exec-text-container mt-36 mb-4 ml-32 font-oswald'>
                     <h1 className='text-6xl text-white'>
@@ -8,12 +48,108 @@ export function Exec() {
                     </h1>
                 </div>
             </div>
-            <div className='exec-content my-48 flex flex-col'>
+            <div className='exec-content-top mt-12 w-full flex flex-row justify-center space-x-24'>
+                <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                onClick={() => handleMemberButtonClick('a')}>
+                    <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                    style={{
+                        backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                    }}>
+                        <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
+                            <h1 className='inline-block text-lg'>HAYLE KIM</h1>
+                            <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                        </div>
+                    </div>
+                </div>
 
-                <p className='mr-20'>Placeholder paragraph</p>
-
-                <p>Placeholder paragraph</p>
+                <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                onClick={() => handleMemberButtonClick('b')}>
+                    <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                    style={{
+                        backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                    }}>
+                        <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
+                            <h1 className='inline-block text-lg'>STACY LIANG</h1>
+                            <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+
+            <div className='exec-content-bottom my-12 w-full flex flex-row justify-evenly'>
+                <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                onClick={() => handleMemberButtonClick('b')}>
+                    <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                    style={{
+                        backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                    }}>
+                        <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
+                            <h1 className='inline-block text-lg'>STACY LIANG</h1>
+                            <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                onClick={() => handleMemberButtonClick('b')}>
+                    <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                    style={{
+                        backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                    }}>
+                        <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
+                            <h1 className='inline-block text-lg'>STACY LIANG</h1>
+                            <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                onClick={() => handleMemberButtonClick('b')}>
+                    <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                    style={{
+                        backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                    }}>
+                        <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
+                            <h1 className='inline-block text-lg'>STACY LIANG</h1>
+                            <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                onClick={() => handleMemberButtonClick('b')}>
+                    <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                    style={{
+                        backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                    }}>
+                        <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
+                            <h1 className='inline-block text-lg'>STACY LIANG</h1>
+                            <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div ref={dropdownContentRef} 
+                className={`exec-dropdown-content w-full bg-slate-400 }`}>
+                {selectedMember && (
+                <div className='mb-8 px-4 py-6 mx-auto'>
+                    <div className='dropdown-text-container mx-16 font-oswald'>
+                        <h1 className='text-slate-900 text-3xl font-bold mb-4'>{memberNames[selectedMember]}</h1>
+                        <p className='text-slate-800'>{memberInfo[selectedMember]}</p>
+                        <button
+                            className='mt-4 px-4 py-2 text-white bg-slate-800 font-semibold hover:bg-opacity-75 transition duration-200'
+                            onClick={handleCloseButtonClick}
+                            >
+                            CLOSE
+                        </button>
+                    </div>
+                </div>
+                )}
+            </div>
+
+
         </div>
     )
 }

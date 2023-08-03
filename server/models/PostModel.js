@@ -10,9 +10,9 @@ const postSchema = mongoose.Schema(
             type: String,
             required: [true, "Enter post body:"],
         },
-        image: {
+        date: {
             type: String,
-            required: false,
+            required: [true, "Enter post date:"],
         }
     },
     {

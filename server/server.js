@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.send('Hello');
+    res.send('Server running');
 })
 
 app.get('/announcements', async (req, res) => {

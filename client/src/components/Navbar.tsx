@@ -2,18 +2,18 @@
 export default function Navbar() {
   return (
     <nav className="absolute w-full flex items-center justify-center dark:bg-gray-900 text-white font-oswald" style={{ zIndex: 1 }}>
-        <div className="navbar-menu-items">
-          <ul className="menu my-2 menu-horizontal flex justify-between space-x-24 text-2xl">
+        <div className="navbar-menu-items w-full">
+          <ul className="menu my-2 w-full menu-horizontal flex justify-evenly text-2xl">
             <li><a href='/' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>HOME</a></li>
             <li>
-              <a className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>ABOUT</a>
+              <a className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>ABOUT US</a>
               <ul className="w-36 p-2 absolute bg-gray-400 shadow text-lg">
                 <li><a href='/overview' className='p-2 hover:bg-blue-100 hover:bg-opacity-25 duration-150'>OVERVIEW</a></li>
                 <li><a href='/exec' className='p-2 hover:bg-blue-100 hover:bg-opacity-25 duration-150'>EXEC BOARD</a></li>
               </ul>
             </li>
 
-            <li><a href='/announcements' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>MEMBERS</a></li>
+            <li><a href='/gallery' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>GALLERY</a></li>
 
 
             <li>

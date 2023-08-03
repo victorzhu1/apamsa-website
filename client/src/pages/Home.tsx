@@ -8,7 +8,6 @@ export function Home () {
         backgroundRepeat: 'repeat',
     };
 
-
     const [selectedPillar, setSelectedPillar] = useState<string | null>(null);
 
     const pillarHeaders: { [key: string]: string } = {
@@ -65,14 +64,14 @@ export function Home () {
                     <h1 className="text-9xl font-bold ">UPENN APAMSA</h1>
                     <p className="text-2xl font-bold">THE FIRST PRE-MEDICAL AANHPI ORGANIZATION AT UPENN</p>
                     <div className="home-info-buttons">
-                        <a role="button" href="/about" className="inline-block border border-white cursor-pointer px-4 py-3 
-                        text-center text-md font-semibold uppercase text-white transition duration-200 ease-in-out 
+                        <a role="button" href="/overview" className="inline-block border border-white cursor-pointer px-4 py-3 
+                        text-center text-xl font-semibold uppercase text-white transition duration-200 ease-in-out 
                         hover:bg-opacity-25 hover:bg-white">
                             LEARN MORE
                         </a>
                         <span style={{ margin: '0 5px' }}></span>
-                        <a role="button" href="/announcements" className="inline-block border border-white cursor-pointer px-4 py-3 
-                        text-center text-md font-bold text-white transition duration-200 ease-in-out 
+                        <a role="button" href="/events" className="inline-block border border-white cursor-pointer px-4 py-3 
+                        text-center text-xl font-bold text-white transition duration-200 ease-in-out 
                         hover:bg-opacity-25 hover:bg-white">
                             COMING UP
                         </a>
