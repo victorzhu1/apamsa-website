@@ -42,41 +42,39 @@ export function Home () {
     }, [selectedPillar]);
 
     return (
-        <div className='home-container h-screen w-screen font-oswald'>
+        <div className='home-container h-full w-screen font-oswald'>
 
-            <div className='hero-container flex justify-center items-center h-screen text-white '>
+            <div className='hero-container relative flex justify-center items-center h-screen text-white'
+            style={{
+                backgroundImage: `url(${'/images/home-image-crop.jpeg'})`,
+                backgroundSize: 'cover',
+                filter: 'grayscale(70%)',
+            }}>
                 <div
-                className='background-image absolute w-full h-full'
-                style={{
-                    backgroundImage: `url(${'/images/home-image-crop.jpeg'})`,
-                    backgroundSize: 'cover',
-                    filter: 'grayscale(70%)',
-                }}
-                >
-                    <div
-                        className="absolute top-0 left-0 w-full h-full"
-                        style={{
-                        background: 'rgba(39, 159, 255, 0.6)',
-                        }}
-                    ></div>
-                </div>
-                <div className='home-info ml-5 mr-5 md:ml-0 md:mr-80 mb-8 relative space-y-4'>
-                    <h1 className="text-5xl md:text-9xl font-bold ">UPENN APAMSA</h1>
-                    <p className="text-xl md:text-2xl font-bold">THE FIRST PRE-MEDICAL AANHPI ORGANIZATION AT UPENN</p>
-                    <div className="home-info-buttons">
-                        <a role="button" href="/overview" className="inline-block border border-white cursor-pointer px-4 py-3 
-                        text-center text-xl font-semibold uppercase text-white transition duration-200 ease-in-out 
-                        hover:bg-opacity-25 hover:bg-white">
-                            LEARN MORE
-                        </a>
-                        <span style={{ margin: '0 5px' }}></span>
-                        <a role="button" href="/events" className="inline-block border border-white cursor-pointer px-4 py-3 
-                        text-center text-xl font-bold text-white transition duration-200 ease-in-out 
-                        hover:bg-opacity-25 hover:bg-white">
-                            COMING UP
-                        </a>
+                    className="absolute w-full h-full flex flex-col justify-center items-center"
+                    style={{
+                    background: 'rgba(39, 159, 255, 0.6)',
+                    }}
+                    >
+                        <div className='home-info ml-5 mr-5 md:ml-0 md:mr-80 mb-8 space-y-4'>
+                            <h1 className="text-5xl md:text-9xl font-bold ">UPENN APAMSA</h1>
+                            <p className="text-xl md:text-2xl font-bold">THE FIRST PRE-MEDICAL AANHPI ORGANIZATION AT UPENN</p>
+                            <div className="home-info-buttons">
+                                <a role="button" href="/overview" className="inline-block border border-white cursor-pointer px-4 py-3 
+                                text-center text-xl font-semibold uppercase text-white transition duration-200 ease-in-out 
+                                hover:bg-opacity-25 hover:bg-white">
+                                    LEARN MORE
+                                </a>
+                                <span style={{ margin: '0 5px' }}></span>
+                                <a role="button" href="/events" className="inline-block border border-white cursor-pointer px-4 py-3 
+                                text-center text-xl font-bold text-white transition duration-200 ease-in-out 
+                                hover:bg-opacity-25 hover:bg-white">
+                                    COMING UP
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                
             </div>
 
             <div className="mission-container w-screen">

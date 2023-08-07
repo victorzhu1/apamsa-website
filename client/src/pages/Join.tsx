@@ -17,7 +17,7 @@ export function Join() {
             }}
             >
                 <div
-                    className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-center"
+                    className="absolute w-full h-full flex flex-col justify-center items-center text-center"
                     style={{
                     background: 'rgba(39, 159, 255, 0.6)',
                     }}

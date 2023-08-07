@@ -17,7 +17,15 @@ export function Overview() {
                             width: '35%',
                             height: '35%',
                         }}/> 
-                    <img src="/images/overview-1.jpg" alt="pic" className="object-cover md:hidden px-4 mb-8 h-1/5"/> 
+
+                    <div className="aspect-w-4 aspect-h-3 px-6 mb-4 md:hidden">
+                        <img
+                            src="/images/overview-1.jpg"
+                            alt="pic"
+                            className="object-cover"
+                        />
+                    </div>
+
                     <div className="overview-section-text w-3/4 md:w-1/3 flex flex-col md:ml-32 text-center">
                         <h1 className="text-slate-900 inline-block text-3xl lg:text-5xl font-bold mb-2 md:mb-8 md:px-12 py-3 bg-white border-4 border-slate-800">APAMSA NATIONWIDE</h1>
                         <p className="text-lg md:text-xl mb-3 md:mb-8">
@@ -48,7 +56,14 @@ export function Overview() {
                             width: '35%',
                             height: '35%',
                         }}/> 
-                    <img src="/images/overview-1.jpg" alt="pic" className="object-cover md:hidden px-4 mb-8 mt-4 h-1/5"/> 
+
+                    <div className="aspect-w-4 aspect-h-3 mt-3 px-6 md:hidden">
+                        <img
+                            src="/images/overview-1.jpg"
+                            alt="pic"
+                            className="object-cover"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
