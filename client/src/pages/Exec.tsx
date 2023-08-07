@@ -48,8 +48,8 @@ export function Exec() {
                     </h1>
                 </div>
             </div>
-            <div className='exec-content-top mt-12 w-full flex flex-row justify-center space-x-24'>
-                <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
+            <div className='exec-content-top mt-12 w-full flex flex-row justify-evenly'>
+                <div className='card w-40 h-60 md:w-60 md:h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
                 onClick={() => handleMemberButtonClick('a')}>
                     <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
                     style={{
@@ -62,7 +62,7 @@ export function Exec() {
                     </div>
                 </div>
 
-                <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                <div className='card w-40 h-60 md:w-60 md:h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
                 onClick={() => handleMemberButtonClick('b')}>
                     <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
                     style={{
@@ -76,66 +76,128 @@ export function Exec() {
                 </div>
             </div>
 
-
-            <div className='exec-content-bottom my-12 w-full flex flex-row justify-evenly'>
-                <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
-                onClick={() => handleMemberButtonClick('b')}>
-                    <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
-                    style={{
-                        backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
-                    }}>
-                        <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
-                            <h1 className='inline-block text-lg'>STACY LIANG</h1>
-                            <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+            <div className='exec-content-lg hidden md:block w-full'>
+                <div className='exec-content-bottom my-12 w-full flex flex-row justify-evenly'>
+                    <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                    onClick={() => handleMemberButtonClick('b')}>
+                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                        style={{
+                            backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                        }}>
+                            <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
+                                <h1 className='inline-block text-lg'>STACY LIANG</h1>
+                                <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
-                onClick={() => handleMemberButtonClick('b')}>
-                    <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
-                    style={{
-                        backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
-                    }}>
-                        <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
-                            <h1 className='inline-block text-lg'>STACY LIANG</h1>
-                            <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                    <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                    onClick={() => handleMemberButtonClick('b')}>
+                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                        style={{
+                            backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                        }}>
+                            <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
+                                <h1 className='inline-block text-lg'>STACY LIANG</h1>
+                                <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
-                onClick={() => handleMemberButtonClick('b')}>
-                    <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
-                    style={{
-                        backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
-                    }}>
-                        <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
-                            <h1 className='inline-block text-lg'>STACY LIANG</h1>
-                            <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                    <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                    onClick={() => handleMemberButtonClick('b')}>
+                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                        style={{
+                            backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                        }}>
+                            <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
+                                <h1 className='inline-block text-lg'>STACY LIANG</h1>
+                                <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
-                onClick={() => handleMemberButtonClick('b')}>
-                    <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
-                    style={{
-                        backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
-                    }}>
-                        <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
-                            <h1 className='inline-block text-lg'>STACY LIANG</h1>
-                            <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                    <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                    onClick={() => handleMemberButtonClick('b')}>
+                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                        style={{
+                            backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                        }}>
+                            <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
+                                <h1 className='inline-block text-lg'>STACY LIANG</h1>
+                                <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+            <div className='exec-content-mobile md:hidden w-full'>
+                <div className='exec-content-middle mt-6 w-full flex flex-row justify-evenly'>
+                    <div className='card w-40 h-60 md:w-60 md:h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                    onClick={() => handleMemberButtonClick('b')}>
+                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                        style={{
+                            backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                        }}>
+                            <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
+                                <h1 className='inline-block text-lg'>STACY LIANG</h1>
+                                <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className='card w-40 h-60 md:w-60 md:h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                    onClick={() => handleMemberButtonClick('b')}>
+                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                        style={{
+                            backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                        }}>
+                            <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
+                                <h1 className='inline-block text-lg'>STACY LIANG</h1>
+                                <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='exec-content-bottom my-6 w-full flex flex-row justify-evenly'>
+                    <div className='card w-40 h-60 md:w-60 md:h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                    onClick={() => handleMemberButtonClick('b')}>
+                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                        style={{
+                            backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                        }}>
+                            <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
+                                <h1 className='inline-block text-lg'>STACY LIANG</h1>
+                                <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className='card w-40 h-60 md:w-60 md:h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
+                    onClick={() => handleMemberButtonClick('b')}>
+                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                        style={{
+                            backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                        }}>
+                            <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
+                                <h1 className='inline-block text-lg'>STACY LIANG</h1>
+                                <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
 
             <div ref={dropdownContentRef} 
                 className={`exec-dropdown-content w-full bg-slate-400 }`}>
                 {selectedMember && (
-                <div className='mb-8 px-4 py-6 mx-auto'>
-                    <div className='dropdown-text-container mx-16 font-oswald'>
+                <div className='mb-8 px-4 py-12 mx-auto'>
+                    <div className='dropdown-text-container mx-8 md:mx-16 font-oswald'>
                         <h1 className='text-slate-900 text-3xl font-bold mb-4'>{memberNames[selectedMember]}</h1>
                         <p className='text-slate-800'>{memberInfo[selectedMember]}</p>
                         <button
