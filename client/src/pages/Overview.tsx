@@ -2,8 +2,8 @@ export function Overview() {
     return (
         <div className='overview-container h-full w-screen flex flex-col items-center justify-center font-oswald'>
             <div className='overview-header w-full bg-slate-700'>
-                <div className='overview-text-container mt-36 mb-4 ml-32 font-oswald'>
-                    <h1 className='text-6xl text-white'>
+                <div className='overview-text-container mt-36 mb-4 ml-16 md:ml-32'>
+                    <h1 className='text-5xl md:text-6xl text-white'>
                         OVERVIEW
                     </h1>
                 </div>

@@ -2,8 +2,8 @@ export function Join() {
     return (
         <div className='join-container h-screen w-screen flex flex-col items-center justify-center font-oswald'>
             <div className='join-header w-full bg-slate-700'>
-                <div className='join-text-container mt-36 mb-4 ml-32 font-oswald'>
-                    <h1 className='text-6xl text-white'>
+                <div className='join-text-container mt-36 mb-4 ml-16 md:ml-32'>
+                    <h1 className='text-5xl md:text-6xl text-white'>
                         JOIN US
                     </h1>
                 </div>
@@ -22,7 +22,7 @@ export function Join() {
                     background: 'rgba(39, 159, 255, 0.6)',
                     }}
                 >
-                    <div className="join-text-container w-1/2 px-16 py-12 bg-slate-100 bg-opacity-75 border-2 border-slate-800">
+                    <div className="join-text-container w-2/3 md:w-1/2 px-16 py-12 bg-slate-100 bg-opacity-75 border-2 border-slate-800">
                         <h1 className="text-slate-900 text-5xl font-bold mb-16">Interested in joining?</h1>
                         <p className="text-xl mb-8">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 

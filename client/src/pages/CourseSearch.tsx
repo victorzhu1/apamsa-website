@@ -50,8 +50,8 @@ export const CourseSearch = (): JSX.Element => {
   return (
     <div className="coursesearch-container h-full w-screen flex flex-col items-center justify-center">
       <div className="coursesearch-header w-full bg-slate-700">
-        <div className='coursesearch-text-container mt-36 mb-4 ml-32 font-oswald'>
-          <h1 className="text-6xl text-white">COURSE SEARCH</h1>
+        <div className='coursesearch-text-container mt-36 mb-4 ml-16 md:ml-32 font-oswald'>
+          <h1 className="text-4xl md:text-6xl text-white">COURSE SEARCH</h1>
         </div>
       </div>
         <div className="coursesearch-content bg-white text-center my-16 font-oswald">

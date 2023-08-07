@@ -2,8 +2,8 @@ export function Gallery() {
     return (
         <div className='gallery-container h-screen w-screen flex flex-col items-center justify-center font-oswald'>
             <div className='gallery-header w-full bg-slate-700'>
-                <div className='gallery-text-container mt-36 mb-4 ml-32 font-oswald'>
-                    <h1 className='text-6xl text-white'>
+                <div className='gallery-text-container mt-36 mb-4 ml-16 md:ml-32 font-oswald'>
+                    <h1 className='text-5xl md:text-6xl text-white'>
                         GALLERY
                     </h1>
                 </div>
