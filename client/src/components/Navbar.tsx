@@ -1,9 +1,24 @@
+import { useState } from "react";
 
 export default function Navbar() {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+  
   return (
     <nav className="absolute w-full flex items-center justify-center dark:bg-gray-900 text-white font-oswald" style={{ zIndex: 1 }}>
         <div className="navbar-menu-items w-full">
-          <ul className="menu my-2 w-full menu-horizontal flex justify-evenly text-2xl">
+
+          <div className="block md:hidden">
+            <button className="p-2 border-4" onClick={toggleMenu}>
+              <i className="fa-solid fa-bars text-4xl transition duration-200 hover:text-slate-400"></i>
+            </button>
+          </div>
+
+          <ul className="menu hidden md:flex my-2 w-full menu-horizontal justify-evenly text-2xl">
             <li><a href='/' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>HOME</a></li>
             <li>
               <a className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>ABOUT US</a>
@@ -32,7 +47,7 @@ export default function Navbar() {
               </ul>
             </li>
 
-            <li><a href='/join' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>JOIN US</a></li>
+            <li><a href='/join' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>JOIN!</a></li>
 
           </ul>
         </div>

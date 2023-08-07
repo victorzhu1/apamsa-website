@@ -42,7 +42,7 @@ export function Home () {
     }, [selectedPillar]);
 
     return (
-        <div className='home-container h-full w-screen'>
+        <div className='home-container h-full w-screen font-oswald'>
 
             <div className='hero-container flex justify-center items-center h-screen text-white '>
                 <div
@@ -60,8 +60,8 @@ export function Home () {
                         }}
                     ></div>
                 </div>
-                <div className='home-info mr-80 mb-8 font-oswald relative space-y-4'>
-                    <h1 className="text-9xl font-bold ">UPENN APAMSA</h1>
+                <div className='home-info ml-5 md:ml-0 md:mr-80 mb-8 relative space-y-4'>
+                    <h1 className="text-5xl md:text-9xl font-bold ">UPENN APAMSA</h1>
                     <p className="text-2xl font-bold">THE FIRST PRE-MEDICAL AANHPI ORGANIZATION AT UPENN</p>
                     <div className="home-info-buttons">
                         <a role="button" href="/overview" className="inline-block border border-white cursor-pointer px-4 py-3 
@@ -79,18 +79,16 @@ export function Home () {
                 </div>
             </div>
 
-            <div className="mission-container w-screen font-oswald">
-                <div className="chapter-info-container flex flex-row align-items-center justify-center py-16"
+            <div className="mission-container w-screen">
+                <div className="chapter-info-container flex flex-col md:flex-row align-items-center justify-center px-8 py-8 md:py-16"
                 style={backgroundStyle}>
                 
                     <img src="/images/chapter-into-pic.jpeg" alt="pic" 
-                        style={{
-                            objectFit: 'cover',
-                            width: '40%',
-                            height: '40%',
-                        }}/> 
-                    <div className="chapter-info-text w-1/3 flex flex-col ml-32 text-center">
-                        <h1 className="text-slate-900 inline-block text-5xl font-bold mb-16 px-12 py-3 bg-white border-4 border-slate-800">OUR CHAPTER</h1>
+                            className="object-cover mb-8 md:w-2/5 md:h-2/5"
+                            /> 
+                    <div className="chapter-info-text md:w-1/3 md:flex flex-col md:ml-32 text-center">
+                        <h1 className="text-slate-900 inline-block text-4xl md:text-5xl font-bold mb-8 md:mb-16 px-12 py-3
+                         bg-white border-4 border-slate-800">OUR CHAPTER</h1>
                         <p className="text-xl">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
                             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -99,8 +97,8 @@ export function Home () {
                     </div>
                 </div>
                 <div className="mission-info-container bg-slate-500 py-16 flex flex-col text-center text-white">
-                    <h1 className=" text-5xl font-bold mb-8"> OUR MISSION </h1>
-                    <p className="w-1/2 mx-auto text-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                    <h1 className="text-4xl md:text-5xl font-bold mb-8"> OUR MISSION </h1>
+                    <p className="w-2/3 md:w-1/2 mx-auto text-lg md:text-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
                         ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
@@ -108,10 +106,10 @@ export function Home () {
             </div>
 
 
-            <div className="pillars-container w-screen py-16 font-oswald text-center"
+            <div className="pillars-container w-screen py-16 text-center"
             style={backgroundStyle}>
-                <h1 className="text-slate-900 inline-block text-5xl font-bold mb-16 px-12 py-3 bg-white border-4 border-slate-800">OUR PILLARS</h1>
-                <div className="pillars-menu-horizontal mx-16 flex flex-row justify-between">
+                <h1 className="text-slate-900 inline-block text-4xl md:text-5xl font-bold mb-8 md:mb-16 px-12 py-3 bg-white border-4 border-slate-800">OUR PILLARS</h1>
+                <div className="pillars-menu-horizontal space-y-8 md:space-y-0 mx-24 md:mx-16 flex flex-col md:flex-row justify-between">
                     <div className="pillar-item flex flex-col">
                         <div
                         className='relative'
@@ -124,7 +122,7 @@ export function Home () {
                             />
                         </div>
                         <button
-                            className={`inline-block border-4 border-slate-800 bg-white cursor-pointer px-4 py-3 text-center text-md 
+                            className={`inline-block border-4 border-slate-800 bg-white cursor-pointer px-4 py-1 md:py-3 text-center text-md 
                             font-bold text-slate-800`}
                             onClick={() => handlePillarButtonClick('outreach')}
                             >
@@ -144,7 +142,7 @@ export function Home () {
                             />
                         </div>
                         <button
-                            className={`inline-block border-4 border-slate-800 bg-white cursor-pointer px-4 py-3 text-center text-md 
+                            className={`inline-block border-4 border-slate-800 bg-white cursor-pointer px-4 py-1 md:py-3 text-center text-md 
                             font-bold text-slate-800`}
                             onClick={() => handlePillarButtonClick('professional')}
                             >
@@ -164,7 +162,7 @@ export function Home () {
                             />
                         </div>
                         <button
-                            className={`inline-block border-4 border-slate-800 bg-white cursor-pointer px-4 py-3 text-center text-md 
+                            className={`inline-block border-4 border-slate-800 bg-white cursor-pointer px-4 py-1 md:py-3 text-center text-md 
                             font-bold text-slate-800`}
                             onClick={() => handlePillarButtonClick('community')}
                             >
@@ -179,7 +177,7 @@ export function Home () {
                 className={`dropdown-content w-full bg-white }`}>
                 {selectedPillar && (
                 <div className='mb-8 px-4 py-6 mx-auto'>
-                    <div className='dropdown-text-container mx-16 font-oswald'>
+                    <div className='dropdown-text-container mx-8 md:mx-16'>
                         <h1 className='text-slate-900 text-3xl font-bold mb-4'>{pillarHeaders[selectedPillar]}</h1>
                         <p className='text-slate-800'>{pillarData[selectedPillar]}</p>
                         <button

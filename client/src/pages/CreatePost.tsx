@@ -23,7 +23,7 @@ export function CreatePost() {
 
     const onSubmitA = (data: Announcement) => {
         axios.post("http://localhost:3001/announcements", data).then((response) => {
-          navigate("/");
+          navigate("/events");
         });
       };
 
@@ -67,7 +67,7 @@ export function CreatePost() {
                         <label className="text-xl mb-2"> Date: </label>
                         <ErrorMessage name = "date" component="span"/>
                         <Field id="inputCreatePost" name="date" placeholder="ex...4/12/2003" className="border-2 p-2 mb-2"/>
-                        
+
                         <button type = "submit" className="mt-4 px-4 py-2 text-white bg-slate-800 font-semibold hover:bg-opacity-75 transition duration-200"> Create a Post </button>
                     </Form>
                 </Formik>

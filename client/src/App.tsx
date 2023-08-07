@@ -29,7 +29,7 @@ function App() {
           <Route path='/join' element={<Join />} />
         </Routes>
       </div>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 }

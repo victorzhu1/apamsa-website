@@ -19,7 +19,7 @@ export function Overview() {
                             height: '35%',
                         }}/> 
                     <div className="overview-section-text w-1/3 flex flex-col ml-32 text-center">
-                        <h1 className="text-slate-900 inline-block text-5xl font-bold mb-8 px-12 py-3 bg-white border-4 border-slate-800">APAMSA NATIONWIDE</h1>
+                        <h1 className="text-slate-900 inline-block text-4xl lg:text-5xl font-bold mb-8 px-12 py-3 bg-white border-4 border-slate-800">APAMSA NATIONWIDE</h1>
                         <p className="text-xl mb-8">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
                             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -35,7 +35,7 @@ export function Overview() {
 
                 <div className='overview-section flex flex-row align-items-center justify-center py-8'>
                     <div className="overview-section-text w-1/3 flex flex-col mr-32 text-center">
-                        <h1 className="text-slate-900 inline-block text-5xl font-bold mb-8 px-12 py-3 bg-white border-4 border-slate-800">APAMSA AT UPENN</h1>
+                        <h1 className="text-slate-900 inline-block text-4xl lg:text-5xl font-bold mb-8 px-12 py-3 bg-white border-4 border-slate-800">APAMSA AT UPENN</h1>
                         <p className="text-xl">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
                             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
