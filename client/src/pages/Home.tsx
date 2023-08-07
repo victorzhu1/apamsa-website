@@ -80,11 +80,10 @@ export function Home () {
             </div>
 
             <div className="mission-container w-screen">
-                <div className="chapter-info-container flex flex-col md:flex-row align-items-center justify-center px-8 py-8 md:py-16"
-                style={backgroundStyle}>
+                <div className="chapter-info-container flex flex-col md:flex-row align-items-center justify-center px-8 py-8 md:px-0 md:py-16">
                 
                     <img src="/images/chapter-into-pic.jpeg" alt="pic" 
-                            className="object-cover mb-8 md:w-2/5 md:h-2/5"
+                            className="object-cover mb-8 md:mb-0 md:w-2/5 md:h-2/5"
                             /> 
                     <div className="chapter-info-text md:w-1/3 md:flex flex-col md:ml-32 text-center">
                         <h1 className="text-slate-900 inline-block text-4xl md:text-5xl font-bold mb-4 md:mb-16 px-12 py-3
@@ -106,8 +105,7 @@ export function Home () {
             </div>
 
 
-            <div className="pillars-container w-screen py-16 text-center"
-            style={backgroundStyle}>
+            <div className="pillars-container w-screen py-16 text-center">
                 <h1 className="text-slate-900 inline-block text-4xl md:text-5xl font-bold mb-8 md:mb-16 px-12 py-3 bg-white border-4 border-slate-800">OUR PILLARS</h1>
                 <div className="pillars-menu-horizontal space-y-8 md:space-y-0 mx-20 md:mx-16 flex flex-col md:flex-row justify-between">
                     <div className="pillar-item flex flex-col">

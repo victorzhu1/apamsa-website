@@ -48,13 +48,13 @@ export const CourseSearch = (): JSX.Element => {
   };
 
   return (
-    <div className="coursesearch-container h-full w-screen flex flex-col items-center justify-center">
-      <div className="coursesearch-header w-full bg-slate-700">
-        <div className='coursesearch-text-container mt-36 mb-4 ml-16 md:ml-32 font-oswald'>
+    <div className="coursesearch-container h-full w-screen flex flex-col items-center justify-center font-oswald">
+      <div className="coursesearch-header w-full bg-slate-700 flex justify-center md:justify-start text-center">
+        <div className='coursesearch-text-container mt-36 mb-4 md:ml-32'>
           <h1 className="text-4xl md:text-6xl text-white">COURSE SEARCH</h1>
         </div>
       </div>
-        <div className="coursesearch-content bg-white text-center my-16 font-oswald">
+        <div className="coursesearch-content bg-white text-center my-16">
           <p className="text-lg mb-2">Enter a query for courses:</p>
           <form onSubmit={handleFormSubmit} className="flex flex-col items-center mb-4">
               <div className="mb-4">

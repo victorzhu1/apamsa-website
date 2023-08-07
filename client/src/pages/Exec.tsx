@@ -41,8 +41,8 @@ export function Exec() {
 
     return (
         <div className='exec-container h-full w-screen flex flex-col items-center justify-center font-oswald'>
-            <div className='exec-header w-full bg-slate-700'>
-                <div className='exec-text-container mt-36 mb-4 ml-16 md:ml-32'>
+            <div className='exec-header w-full bg-slate-700 flex justify-center md:justify-start text-center'>
+                <div className='exec-text-container mt-36 mb-4 md:ml-32'>
                     <h1 className='text-5xl md:text-6xl text-white'>
                         EXEC BOARD
                     </h1>

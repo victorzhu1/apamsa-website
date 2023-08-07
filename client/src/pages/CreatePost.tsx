@@ -38,8 +38,8 @@ export function CreatePost() {
 
     return (
         <div className="create-post-page h-full w-screen flex flex-col items-center justify-center font-oswald">
-            <div className='create-header w-full bg-slate-700'>
-                <div className='exec-text-container mt-36 mb-4 ml-32 font-oswald'>
+            <div className='create-header w-full bg-slate-700 flex justify-center md:justify-start text-center'>
+                <div className='exec-text-container mt-36 mb-4 md:ml-32'>
                     <h1 className='text-6xl text-white'>
                         CREATE A POST
                     </h1>

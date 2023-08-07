@@ -9,7 +9,7 @@ export default function Navbar() {
   };
   
   return (
-    <nav className="absolute w-full flex items-center justify-center dark:bg-gray-900 text-white font-oswald" style={{ zIndex: 1 }}>
+    <nav className="absolute w-full flex items-center justify-center text-white font-oswald" style={{ zIndex: 1 }}>
         <div className="navbar-menu-items w-full">
 
           <div className="block md:hidden m-4">
@@ -18,7 +18,7 @@ export default function Navbar() {
             </button>
           </div>
 
-          <div className={`md:hidden fixed top-0 left-0 w-64 p-4 bg-slate-500 border-r-2 border-slate-800 h-full overflow-y-auto transform transition-transform duration-300 ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}>
+          <div className={`md:hidden fixed top-0 left-0 w-64 p-4 bg-slate-500 border-r border-slate-800 h-full overflow-y-auto transform transition-transform duration-300 ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}>
           <button className="p-2 border-4" onClick={toggleMenu}>
             <i className="fa-solid fa-bars text-4xl transition duration-200 hover:text-slate-400"></i>
           </button>

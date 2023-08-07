@@ -37,8 +37,8 @@ export function Events() {
 
     return (
         <div className='events-container h-full w-full flex flex-col items-center justify-center font-oswald'>
-            <div className='events-header w-full bg-slate-700'>
-                <div className='events-text-container mt-36 mb-4 ml-16 md:ml-32'>
+            <div className='events-header w-full bg-slate-700 flex justify-center md:justify-start text-center'>
+                <div className='events-text-container mt-36 mb-4 md:ml-32'>
                     <h1 className='text-5xl md:text-6xl text-white'>
                         EVENTS
                     </h1>
@@ -49,7 +49,7 @@ export function Events() {
                     <h1 className='mb-8 text-4xl '>
                         CALENDAR
                     </h1>
-                    <div className="w-full md:w-2/3">
+                    <div className="w-full px-4 md:w-2/3">
                         <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23dee5ff&ctz=America%2FNew_York&showPrint=0&showTitle=0&src=Y180YTViYjM2MmE3ZWFkODNiOTRmYWZiZmRiNzMyNGFmMDNkZTZiNTQ1YmJkN2EyMDZhNzg3MGQ5NWI3MjQzMjA1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%233F51B5" 
                             className="w-full"
                             height="600">
