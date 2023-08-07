@@ -9,7 +9,7 @@ export function Gallery() {
                 </div>
             </div>
             <div
-            className='background-image w-screen h-full'
+            className='background-image relative w-screen h-screen'
             style={{
                 backgroundImage: `url(${'/images/join-bg.png'})`,
                 backgroundSize: 'cover',

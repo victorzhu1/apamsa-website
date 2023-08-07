@@ -12,7 +12,7 @@ export default function Navbar() {
     <nav className="absolute w-full flex items-center justify-center text-white font-oswald" style={{ zIndex: 1 }}>
         <div className="navbar-menu-items w-full">
 
-          <div className="block md:hidden m-4">
+          <div className="md:hidden m-4">
             <button className="p-2 border-4" onClick={toggleMenu}>
               <i className="fa-solid fa-bars text-4xl transition duration-200 hover:text-slate-400"></i>
             </button>

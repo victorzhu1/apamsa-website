@@ -9,7 +9,7 @@ export function Join() {
                 </div>
             </div>
             <div
-            className='background-image w-screen h-screen'
+            className='background-image relative w-screen h-screen'
             style={{
                 backgroundImage: `url(${'/images/join-bg.png'})`,
                 backgroundSize: 'cover',

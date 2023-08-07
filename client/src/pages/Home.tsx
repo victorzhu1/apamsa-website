@@ -42,7 +42,7 @@ export function Home () {
     }, [selectedPillar]);
 
     return (
-        <div className='home-container h-full w-screen font-oswald'>
+        <div className='home-container h-screen w-screen font-oswald'>
 
             <div className='hero-container flex justify-center items-center h-screen text-white '>
                 <div
