@@ -31,7 +31,8 @@ export function Join() {
                             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                             laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
-                        <a role="button" href="https://www.google.com" target="_blank" className="inline-block md:w-2/3 border-2 border-slate-800 cursor-pointer px-4 py-3 
+                        <a role="button" href="https://www.google.com" target="_blank" rel="noreferrer" 
+                        className="inline-block md:w-2/3 border-2 border-slate-800 cursor-pointer px-4 py-3 
                         text-center text-md font-semibold uppercase text-slate-800 transition duration-200 ease-in-out 
                         hover:bg-opacity-25 hover:bg-slate-900">
                             Sign up form!

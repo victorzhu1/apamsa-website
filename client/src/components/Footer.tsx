@@ -30,7 +30,7 @@ export default function Footer() {
                       type='email'
                       value={email}
                       onChange={handleInputChange}
-                      placeholder='yourname@upenn.edu'
+                      placeholder='your-email@upenn.edu'
                       className='border border-gray-300 px-2 py-1 mr-2 text-slate-800'
                     />
                     <button

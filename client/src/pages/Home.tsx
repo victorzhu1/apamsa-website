@@ -95,7 +95,7 @@ export function Home () {
                     </div>
                 </div>
                 <div className="mission-info-container bg-slate-500 py-16 flex flex-col text-center text-white">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-8"> OUR MISSION </h1>
+                    <h1 className="text-4xl md:text-6xl font-bold mb-8"> OUR MISSION </h1>
                     <p className="w-2/3 md:w-1/2 mx-auto text-lg md:text-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
                         ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat.
@@ -115,7 +115,7 @@ export function Home () {
                         >
                             <img
                                 src='/images/outreach-new.jpeg'
-                                alt='image'
+                                alt='outreach'
                                 className='rounded-full shadow-lg mb-3 transition-transform transform-gpu hover:scale-105 cursor-pointer'
                             />
                         </div>
@@ -134,7 +134,7 @@ export function Home () {
                         >
                             <img
                                 src='/images/professional-new.jpeg'
-                                alt='image'
+                                alt='professional'
                                 className='rounded-full shadow-lg mb-3 transition-transform transform-gpu hover:scale-105 cursor-pointer'
                             />
                         </div>
@@ -153,7 +153,7 @@ export function Home () {
                         >
                             <img
                                 src='/images/community-new.jpeg'
-                                alt='image'
+                                alt='community'
                                 className='rounded-full shadow-lg mb-3 transition-transform transform-gpu hover:scale-105 cursor-pointer'
                             />
                         </div>
