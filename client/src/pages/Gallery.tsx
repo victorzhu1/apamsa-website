@@ -1,6 +1,6 @@
 export function Gallery() {
     return (
-        <div className='gallery-container h-screen w-screen flex flex-col items-center justify-center font-oswald'>
+        <div className='gallery-container h-full w-screen flex flex-col items-center justify-center font-oswald'>
             <div className='gallery-header w-full bg-slate-700 flex justify-center md:justify-start text-center'>
                 <div className='gallery-text-container mt-36 mb-4 md:ml-32'>
                     <h1 className='text-5xl md:text-6xl text-white'>
@@ -9,11 +9,12 @@ export function Gallery() {
                 </div>
             </div>
             <div
-            className='background-image relative w-screen h-screen'
+            className='background-image relative w-screen'
             style={{
                 backgroundImage: `url(${'/images/join-bg.png'})`,
                 backgroundSize: 'cover',
                 filter: 'grayscale(70%)',
+                height: '75vh'
             }}
             >
                 <div
@@ -23,8 +24,8 @@ export function Gallery() {
                     }}
                 >
                     <div className="gallery-text-container mx-12 px-16 py-12 bg-slate-100 bg-opacity-75 border-2 border-slate-800">
-                        <h1 className="text-slate-900 text-5xl font-bold mb-16">PHOTO GALLERY</h1>
-                        <p className="text-3xl">
+                        <h1 className="text-slate-900 text-2xl md:text-5xl font-bold mb-4 md:mb-16">PHOTO GALLERY</h1>
+                        <p className="text-xl md:text-3xl">
                             COMING SOON!
                         </p>
                     </div>
