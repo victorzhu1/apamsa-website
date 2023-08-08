@@ -56,8 +56,8 @@ export function Home () {
                     background: 'rgba(39, 159, 255, 0.6)',
                     }}
                     >
-                        <div className='home-info ml-5 mr-5 md:ml-0 md:mr-80 mb-8 space-y-4'>
-                            <h1 className="text-5xl md:text-9xl font-bold ">UPENN APAMSA</h1>
+                        <div className='home-info ml-5 mr-5 md:ml-5 lg:mr-80 mb-8 space-y-4'>
+                            <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold ">UPENN APAMSA</h1>
                             <p className="text-xl md:text-2xl font-bold">THE FIRST PRE-MEDICAL AANHPI ORGANIZATION AT UPENN</p>
                             <div className="home-info-buttons">
                                 <a role="button" href="/overview" className="inline-block border border-white cursor-pointer px-4 py-3 
@@ -84,7 +84,7 @@ export function Home () {
                     <img src="/images/chapter-into-pic.jpeg" alt="pic" 
                             className="object-cover shadow mb-8 md:mb-0 md:w-2/5 md:h-2/5"
                             /> 
-                    <div className="chapter-info-text md:w-1/3 md:flex flex-col md:ml-32 text-center">
+                    <div className="chapter-info-text md:w-1/3 md:flex flex-col md:ml-24 lg:ml-32 text-center">
                         <h1 className="text-slate-900 inline-block text-4xl md:text-5xl font-bold mb-4 md:mb-16 px-12 py-3
                          bg-white border-4 border-slate-800">OUR CHAPTER</h1>
                         <p className="text-xl">
@@ -107,8 +107,8 @@ export function Home () {
             <div className="pillars-container w-screen py-16 text-center"
                 style={backgroundStyle}>
                 <h1 className="text-slate-900 inline-block text-4xl md:text-5xl font-bold mb-8 md:mb-16 px-12 py-3 bg-white border-4 border-slate-800">OUR PILLARS</h1>
-                <div className="pillars-menu-horizontal space-y-8 md:space-y-0 mx-20 md:mx-16 flex flex-col md:flex-row justify-between">
-                    <div className="pillar-item flex flex-col justify-center">
+                <div className="pillars-menu-horizontal space-y-8 md:space-y-0 md:space-x-4 lg:space-x-0 mx-20 md:mx-8 lg:mx-16 flex flex-col md:flex-row justify-between">
+                    <div className="pillar-item flex flex-col justify-center items-center">
                         <div
                         className=''
                         onClick={() => handlePillarButtonClick('outreach')}
@@ -120,15 +120,14 @@ export function Home () {
                             />
                         </div>
                         <button
-                            className={`inline-block border-4 border-slate-800 bg-white cursor-pointer px-4 py-2 text-center text-md md:text-2xl 
+                            className={`inline-block w-full border-4 border-slate-800 bg-white cursor-pointer px-4 py-2 text-center text-md md:text-2xl 
                             font-bold text-slate-800`}
                             onClick={() => handlePillarButtonClick('outreach')}
                             >
                             OUTREACH
                         </button>
-                       
                     </div>
-                    <div className="pillar-item flex flex-col justify-center">
+                    <div className="pillar-item flex flex-col justify-center items-center">
                         <div
                         className=''
                         onClick={() => handlePillarButtonClick('professional')}
@@ -140,15 +139,14 @@ export function Home () {
                             />
                         </div>
                         <button
-                            className={`inline-block border-4 border-slate-800 bg-white cursor-pointer px-4 py-2 text-center text-md md:text-2xl 
+                            className={`inline-block w-full border-4 border-slate-800 bg-white cursor-pointer px-4 py-2 text-center text-md md:text-2xl 
                             font-bold text-slate-800`}
                             onClick={() => handlePillarButtonClick('professional')}
                             >
                             PROFESSIONAL DEVELOPMENT
                         </button>
-                        
                     </div>
-                    <div className="pillar-item flex flex-col justify-center">
+                    <div className="pillar-item flex flex-col justify-center items-center">
                         <div
                         className=''
                         onClick={() => handlePillarButtonClick('community')}
@@ -160,13 +158,12 @@ export function Home () {
                             />
                         </div>
                         <button
-                            className={`inline-block border-4 border-slate-800 bg-white cursor-pointer px-4 py-2 text-center text-md md:text-2xl
+                            className={`inline-block w-full border-4 border-slate-800 bg-white cursor-pointer px-4 py-2 text-center text-md md:text-2xl
                             font-bold text-slate-800`}
                             onClick={() => handlePillarButtonClick('community')}
                             >
                             COMMUNITY
                         </button>
-                        
                     </div>
                 </div>
             </div>
