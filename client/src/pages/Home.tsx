@@ -110,7 +110,7 @@ export function Home () {
                 <div className="pillars-menu-horizontal space-y-8 md:space-y-0 mx-20 md:mx-16 flex flex-col md:flex-row justify-between">
                     <div className="pillar-item flex flex-col justify-center">
                         <div
-                        className='relative'
+                        className='relative items-center'
                         onClick={() => handlePillarButtonClick('outreach')}
                         >
                             <img
@@ -130,7 +130,7 @@ export function Home () {
                     </div>
                     <div className="pillar-item flex flex-col justify-center">
                         <div
-                        className='relative'
+                        className='relative items-center'
                         onClick={() => handlePillarButtonClick('professional')}
                         >
                             <img
@@ -150,7 +150,7 @@ export function Home () {
                     </div>
                     <div className="pillar-item flex flex-col justify-center">
                         <div
-                        className='relative'
+                        className='relative items-center'
                         onClick={() => handlePillarButtonClick('community')}
                         >
                             <img
