@@ -196,8 +196,8 @@ export function Exec() {
             <div ref={dropdownContentRef} 
                 className={`exec-dropdown-content w-full bg-slate-400 }`}>
                 {selectedMember && (
-                <div className='mb-8 px-4 py-12 mx-auto'>
-                    <div className='dropdown-text-container mx-8 md:mx-16 font-oswald'>
+                <div className='mb-4 px-4 py-12 mx-auto'>
+                    <div className='dropdown-text-container mx-4 md:mx-16'>
                         <h1 className='text-slate-900 text-3xl font-bold mb-4'>{memberNames[selectedMember]}</h1>
                         <p className='text-slate-800'>{memberInfo[selectedMember]}</p>
                         <button

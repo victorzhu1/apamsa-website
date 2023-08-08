@@ -4,7 +4,7 @@ import { useRef, useEffect, useState } from 'react';
 export function Home () {
 
     const backgroundStyle = {
-        backgroundImage: `url(${'/images/axiom-pattern.png'})`,
+        backgroundImage: `url(${'/images/hoffman.png'})`,
         backgroundRepeat: 'repeat',
     };
 
@@ -77,11 +77,12 @@ export function Home () {
                 
             </div>
 
-            <div className="mission-container w-screen">
+            <div className="mission-container w-screen"
+                style={backgroundStyle}>
                 <div className="chapter-info-container flex flex-col md:flex-row align-items-center justify-center px-8 py-8 md:px-0 md:py-16">
                 
                     <img src="/images/chapter-into-pic.jpeg" alt="pic" 
-                            className="object-cover mb-8 md:mb-0 md:w-2/5 md:h-2/5"
+                            className="object-cover shadow mb-8 md:mb-0 md:w-2/5 md:h-2/5"
                             /> 
                     <div className="chapter-info-text md:w-1/3 md:flex flex-col md:ml-32 text-center">
                         <h1 className="text-slate-900 inline-block text-4xl md:text-5xl font-bold mb-4 md:mb-16 px-12 py-3
@@ -103,10 +104,11 @@ export function Home () {
             </div>
 
 
-            <div className="pillars-container w-screen py-16 text-center">
+            <div className="pillars-container w-screen py-16 text-center"
+                style={backgroundStyle}>
                 <h1 className="text-slate-900 inline-block text-4xl md:text-5xl font-bold mb-8 md:mb-16 px-12 py-3 bg-white border-4 border-slate-800">OUR PILLARS</h1>
                 <div className="pillars-menu-horizontal space-y-8 md:space-y-0 mx-20 md:mx-16 flex flex-col md:flex-row justify-between">
-                    <div className="pillar-item flex flex-col">
+                    <div className="pillar-item flex flex-col justify-center">
                         <div
                         className='relative'
                         onClick={() => handlePillarButtonClick('outreach')}
@@ -118,7 +120,7 @@ export function Home () {
                             />
                         </div>
                         <button
-                            className={`inline-block border-4 border-slate-800 bg-white cursor-pointer px-4 py-3 text-center text-md 
+                            className={`inline-block border-4 border-slate-800 bg-white cursor-pointer px-4 py-2 text-center text-md md:text-2xl 
                             font-bold text-slate-800`}
                             onClick={() => handlePillarButtonClick('outreach')}
                             >
@@ -126,7 +128,7 @@ export function Home () {
                         </button>
                        
                     </div>
-                    <div className="pillar-item flex flex-col">
+                    <div className="pillar-item flex flex-col justify-center">
                         <div
                         className='relative'
                         onClick={() => handlePillarButtonClick('professional')}
@@ -138,7 +140,7 @@ export function Home () {
                             />
                         </div>
                         <button
-                            className={`inline-block border-4 border-slate-800 bg-white cursor-pointer px-4 py-3 text-center text-md 
+                            className={`inline-block border-4 border-slate-800 bg-white cursor-pointer px-4 py-2 text-center text-md md:text-2xl 
                             font-bold text-slate-800`}
                             onClick={() => handlePillarButtonClick('professional')}
                             >
@@ -146,7 +148,7 @@ export function Home () {
                         </button>
                         
                     </div>
-                    <div className="pillar-item flex flex-col">
+                    <div className="pillar-item flex flex-col justify-center">
                         <div
                         className='relative'
                         onClick={() => handlePillarButtonClick('community')}
@@ -158,7 +160,7 @@ export function Home () {
                             />
                         </div>
                         <button
-                            className={`inline-block border-4 border-slate-800 bg-white cursor-pointer px-4 py-3 text-center text-md 
+                            className={`inline-block border-4 border-slate-800 bg-white cursor-pointer px-4 py-2 text-center text-md md:text-2xl
                             font-bold text-slate-800`}
                             onClick={() => handlePillarButtonClick('community')}
                             >
@@ -172,8 +174,8 @@ export function Home () {
             <div ref={dropdownContentRef} 
                 className={`dropdown-content w-full bg-white }`}>
                 {selectedPillar && (
-                <div className='mb-8 px-4 py-6 mx-auto'>
-                    <div className='dropdown-text-container mx-8 md:mx-16'>
+                <div className='mb-4 px-4 py-12 mx-auto'>
+                    <div className='dropdown-text-container mx-4 md:mx-16'>
                         <h1 className='text-slate-900 text-3xl font-bold mb-4'>{pillarHeaders[selectedPillar]}</h1>
                         <p className='text-slate-800'>{pillarData[selectedPillar]}</p>
                         <button

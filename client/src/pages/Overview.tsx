@@ -1,3 +1,4 @@
+
 export function Overview() {
     return (
         <div className='overview-container h-full w-screen flex flex-col items-center justify-center font-oswald'>
@@ -8,10 +9,10 @@ export function Overview() {
                     </h1>
                 </div>
             </div>
-            <div className='overview-content my-4 md:my-8 flex flex-col'>
+            <div className='overview-content py-4 md:py-8 flex flex-col'>
 
                 <div className='overview-section flex flex-col md:flex-row align-items-center justify-center py-8'>
-                    <img src="/images/overview-1-square.jpg" alt="pic" className="rounded-full hidden md:block"
+                    <img src="/images/overview-1-square.jpg" alt="pic" className="rounded-full shadow hidden md:block"
                         style={{
                             objectFit: 'cover',
                             width: '35%',
@@ -22,7 +23,7 @@ export function Overview() {
                         <img
                             src="/images/overview-1.jpg"
                             alt="pic"
-                            className="object-cover"
+                            className="object-cover shadow"
                         />
                     </div>
 
@@ -50,7 +51,7 @@ export function Overview() {
                             laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
                     </div>
-                    <img src="/images/overview-1-square.jpg" alt="pic" className="rounded-full hidden md:block"
+                    <img src="/images/overview-1-square.jpg" alt="pic" className="rounded-full shadow hidden md:block"
                         style={{
                             objectFit: 'cover',
                             width: '35%',
@@ -61,7 +62,7 @@ export function Overview() {
                         <img
                             src="/images/overview-1.jpg"
                             alt="pic"
-                            className="object-cover"
+                            className="object-cover shadow"
                         />
                     </div>
                 </div>

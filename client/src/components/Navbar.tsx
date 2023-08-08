@@ -18,9 +18,9 @@ export default function Navbar() {
             </button>
           </div>
 
-          <div className={`md:hidden fixed top-0 left-0 w-64 p-4 bg-slate-500 border-r border-slate-800 h-full overflow-y-auto transform transition-transform duration-300 ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}>
+          <div className={`md:hidden fixed top-0 left-0 w-64 p-4 bg-slate-500 bg-opacity-90 border-r border-slate-800 h-full overflow-y-auto transform transition-transform duration-300 ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}>
           <button className="p-2 border-4" onClick={toggleMenu}>
-            <i className="fa-solid fa-bars text-4xl transition duration-200 hover:text-slate-400"></i>
+            <i className="fa-solid fa-xmark text-4xl transition duration-200 hover:text-slate-400"></i>
           </button>
           <ul className="menu my-8 space-y-2 w-full menu-vertical justify-evenly text-2xl">
             <li><a href='/' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>HOME</a></li>
