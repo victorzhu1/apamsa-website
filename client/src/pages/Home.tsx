@@ -17,7 +17,7 @@ export function Home () {
       };
 
     const pillarData: { [key: string]: string } = {
-        outreach: 'Filler text for Outreach section.',
+        outreach: 'Filler text for Outreach section!',
         professional: 'Filler text for Professional Development section.',
         community: 'Filler text for Community section.',
     };
