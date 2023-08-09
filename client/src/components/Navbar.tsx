@@ -28,8 +28,7 @@ export default function Navbar() {
             <li><a href='/exec' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>EXEC BOARD</a></li>
             <li><a href='/gallery' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>GALLERY</a></li>
             <li><a href='/events' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>EVENTS</a></li>
-            <li><a href='/coursesearch' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>COURSE SEARCH</a></li>
-            <li><a href='/more' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>MORE</a></li>
+            <li><a href='/resources' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>RESOURCES</a></li>
             <li><a href='/join' className='p-2 font-bold hover:bg-blue-100 hover:bg-opacity-25 duration-150'>JOIN US!</a></li>
           </ul>
         </div>
