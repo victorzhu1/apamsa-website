@@ -5,7 +5,7 @@ const app = express();
 const cors = require('cors');
 
 const databaseUrl = process.env.REACT_APP_DATABASE_URL;
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT;
 
 app.use(cors());
 app.use(express.json());

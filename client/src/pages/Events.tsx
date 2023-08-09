@@ -2,7 +2,10 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import ReactPaginate from 'react-paginate'
 
-const apiUrl = process.env.REACT_APP_API_URL;
+// const apiUrl = process.env.REACT_APP_API_URL;
+
+const apiUrl = 'https://apamsa-website-server.fly.dev';
+
 
 
 interface Post {
