@@ -2,6 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import ReactPaginate from 'react-paginate'
 
+const apiUrl = 'https://apamsa-website-server.fly.dev';
 
 
 interface Post {
@@ -17,7 +18,7 @@ export function Events() {
     const postsPerPage = 5;
 
     useEffect(() => {
-        axios.get<Post[]>("http://localhost:3001/announcements")
+        axios.get<Post[]>(`${apiUrl}/announcements`)
         .then((response) => {
             setListOfPosts(response.data);
         })
@@ -70,8 +71,9 @@ export function Events() {
                         <div className="text-lg">{post.date}</div>
                     </div>
                     ))}
-                    <div className='announcements-buttons w-full flex flex-row justify-between'>
-                        <div className='paginate-menu'>
+                    <div className='announcements-buttons px-4 mt-4 w-screen md:w-full flex flex-row justify-between'
+                    >
+                        <div className='paginate-menu md:text-xl'>
                             <ReactPaginate
                             previousLabel={"Previous"}
                             nextLabel={"Next"}

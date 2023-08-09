@@ -4,6 +4,8 @@ const Post = require("./models/PostModel");
 const app = express();
 const cors = require('cors');
 
+const PORT = process.env.PORT || 3001;
+
 app.use(cors());
 app.use(express.json());
 
@@ -35,9 +37,9 @@ mongoose.set("strictQuery", false);
 mongoose.connect('mongodb+srv://victorzhu:z43202jms@cluster0.2fmfggq.mongodb.net/?retryWrites=true&w=majority')
 .then(() => {
     console.log("Connected to MongoDB");
-    app.listen(3001, () => {
-        console.log('Server running on port 3001');
-    });    
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });  
 }).catch((error) => {
     console.log("Error when connecting to MongoDB");
 })
