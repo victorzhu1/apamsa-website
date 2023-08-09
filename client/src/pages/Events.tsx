@@ -16,11 +16,14 @@ export function Events() {
     const [listOfPosts, setListOfPosts] = useState<Post[]>([]);
     const [currentPage, setCurrentPage] = useState(0);
     const postsPerPage = 5;
+    const [loading, setLoading] = useState(true);
+
 
     useEffect(() => {
         axios.get<Post[]>(`${apiUrl}/announcements`)
         .then((response) => {
             setListOfPosts(response.data);
+            setLoading(false);
         })
         .catch((error) => {
             console.error("Error fetching announcements:", error);
@@ -61,7 +64,24 @@ export function Events() {
                     <h1 className='mb-8 text-4xl '>
                         ANNOUNCEMENTS
                     </h1>
-                    {currentPosts.map((post) => (
+
+
+                    {loading ? (
+                        <h1 className="mb-4 text-2xl">Loading...</h1>
+                    ) : (
+                        currentPosts.map((post) => (
+                            <div className="post w-full px-4 py-2 mb-2 border-1 border-gray-400 " key={post.id}>
+                                
+                                <div className="text-2xl mb-2">{post.title}</div>
+                                <div className="text-lg mb-1" style={{ wordWrap: "break-word" }}>
+                                    {post.body}
+                                </div>
+                                <div className="text-lg">{post.date}</div>
+                            </div>
+                            ))
+                    )}
+
+                    {/* {currentPosts.map((post) => (
                     <div className="post w-full px-4 py-2 mb-2 border-1 border-gray-400 " key={post.id}>
                         
                         <div className="text-2xl mb-2">{post.title}</div>
@@ -70,7 +90,8 @@ export function Events() {
                         </div>
                         <div className="text-lg">{post.date}</div>
                     </div>
-                    ))}
+                    ))} */}
+
                     <div className='announcements-buttons px-4 mt-4 w-screen md:w-full flex flex-row justify-between'
                     >
                         <div className='paginate-menu md:text-xl'>
