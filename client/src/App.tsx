@@ -5,7 +5,7 @@ import { Home } from './pages/Home';
 import { Overview } from './pages/Overview';
 import { Events } from './pages/Events';
 import { CourseSearch } from './pages/CourseSearch';
-import { More } from './pages/More';
+import { Resources } from './pages/Resources';
 import { Exec } from './pages/Exec';
 import { CreatePost } from './pages/CreatePost';
 import { Join } from './pages/Join';
@@ -24,7 +24,7 @@ function App() {
           <Route path='/gallery' element={<Gallery />} />
           <Route path='/events' element={<Events />} />
           <Route path='/coursesearch' element={<CourseSearch />} />
-          <Route path='/more' element={<More />} />
+          <Route path='/resources' element={<Resources />} />
           <Route path='/create' element={<CreatePost />} />
           <Route path='/join' element={<Join />} />
         </Routes>

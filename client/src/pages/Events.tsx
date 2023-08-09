@@ -31,8 +31,9 @@ export function Events() {
     }, []);
 
     const handlePageChange = (selectedPage: { selected: number }) => {
-    setCurrentPage(selectedPage.selected);
+        setCurrentPage(selectedPage.selected);
     };
+
 
     const startIndex = currentPage * postsPerPage;
     const endIndex = startIndex + postsPerPage;
@@ -81,20 +82,9 @@ export function Events() {
                             ))
                     )}
 
-                    {/* {currentPosts.map((post) => (
-                    <div className="post w-full px-4 py-2 mb-2 border-1 border-gray-400 " key={post.id}>
-                        
-                        <div className="text-2xl mb-2">{post.title}</div>
-                        <div className="text-lg mb-1" style={{ wordWrap: "break-word" }}>
-                            {post.body}
-                        </div>
-                        <div className="text-lg">{post.date}</div>
-                    </div>
-                    ))} */}
-
                     <div className='announcements-buttons px-4 mt-4 w-screen md:w-full flex flex-row justify-between'
                     >
-                        <div className='paginate-menu md:text-xl'>
+                        <div className='paginate-menu md:text-xl '>
                             <ReactPaginate
                             previousLabel={"Previous"}
                             nextLabel={"Next"}
