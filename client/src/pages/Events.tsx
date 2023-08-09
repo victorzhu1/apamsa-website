@@ -2,7 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import ReactPaginate from 'react-paginate'
 
-const apiUrl = 'https://apamsa-website-server.fly.dev';
+const apiUrl = process.env.REACT_APP_API_URL;
 
 
 interface Post {
@@ -57,7 +57,8 @@ export function Events() {
                     <div className="w-full px-4 md:w-2/3">
                         <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23dee5ff&ctz=America%2FNew_York&showPrint=0&showTitle=0&src=Y180YTViYjM2MmE3ZWFkODNiOTRmYWZiZmRiNzMyNGFmMDNkZTZiNTQ1YmJkN2EyMDZhNzg3MGQ5NWI3MjQzMjA1QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%233F51B5" 
                             className="w-full"
-                            height="600">
+                            height="600"
+                            title="calendar">
                         </iframe>
                     </div>
                 </div>

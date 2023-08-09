@@ -4,6 +4,7 @@ const Post = require("./models/PostModel");
 const app = express();
 const cors = require('cors');
 
+const databaseUrl = process.env.REACT_APP_DATABASE_URL;
 const PORT = process.env.PORT || 3001;
 
 app.use(cors());
@@ -34,7 +35,7 @@ app.post('/announcements', async (req, res) => {
 })
 
 mongoose.set("strictQuery", false);
-mongoose.connect('mongodb+srv://victorzhu:z43202jms@cluster0.2fmfggq.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect(databaseUrl)
 .then(() => {
     console.log("Connected to MongoDB");
     app.listen(PORT, () => {

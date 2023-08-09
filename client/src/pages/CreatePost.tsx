@@ -1,8 +1,10 @@
-import React from "react"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import * as Yup from "yup"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
+
+
+const apiUrl = process.env.REACT_APP_API_URL;
 
 
 export function CreatePost() {
@@ -22,7 +24,7 @@ export function CreatePost() {
     }
 
     const onSubmitA = (data: Announcement) => {
-        axios.post("http://localhost:3001/announcements", data).then((response) => {
+        axios.post(`${apiUrl}/announcements`, data).then((response) => {
           navigate("/events");
         });
       };
