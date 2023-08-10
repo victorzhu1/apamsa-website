@@ -7,7 +7,7 @@ require('dotenv').config();
 
 
 const databaseUrl = process.env.DATABASE_URL;
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT;
 
 app.use(cors());
 app.use(express.json());
@@ -37,7 +37,7 @@ app.post('/announcements', async (req, res) => {
 })
 
 mongoose.set("strictQuery", false);
-mongoose.connect('mongodb+srv://victorzhu:z43202jms@cluster0.2fmfggq.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect(databaseUrl)
 .then(() => {
     console.log("Connected to MongoDB");
     app.listen(PORT, () => {

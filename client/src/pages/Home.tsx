@@ -3,6 +3,18 @@ import { useRef, useEffect, useState } from 'react';
 
 export function Home () {
 
+    const [heroVisible, setHeroVisible] = useState(false);
+
+    useEffect(() => {
+        const heroTimeout = setTimeout(() => {
+          setHeroVisible(true);
+        }, 250);
+      
+        return () => {
+          clearTimeout(heroTimeout);
+        };
+    }, []);
+
     const backgroundStyle = {
         backgroundImage: `url(${'/images/hoffman.png'})`,
         backgroundRepeat: 'repeat',
@@ -49,6 +61,8 @@ export function Home () {
                 backgroundImage: `url(${'/images/home-image-crop.jpeg'})`,
                 backgroundSize: 'cover',
                 filter: 'grayscale(70%)',
+                opacity: heroVisible ? 1 : 0, 
+                transition: 'opacity 1s ease-in-out',
             }}>
                 <div
                     className="absolute w-full h-full flex flex-col justify-center items-center"
