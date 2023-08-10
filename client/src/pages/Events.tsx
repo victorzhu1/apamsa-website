@@ -62,11 +62,10 @@ export function Events() {
                         </iframe>
                     </div>
                 </div>
-                <div className='announcements-container w-1/2 mx-auto flex flex-col items-center'>
+                <div className='announcements-container w-2/3 md:w-1/2 mx-auto flex flex-col items-center'>
                     <h1 className='mb-8 text-4xl '>
                         ANNOUNCEMENTS
                     </h1>
-
 
                     {loading ? (
                         <h1 className="mb-4 text-2xl">Loading...</h1>
