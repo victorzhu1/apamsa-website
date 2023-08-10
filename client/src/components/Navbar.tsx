@@ -70,7 +70,7 @@ export default function Navbar() {
                 }}
                 onClick={toggleMenu}
               >
-                <i className="fa-solid fa-bars text-4xl text-slate-100"></i>
+                <i className="fa-solid fa-bars opacity-50 text-4xl text-slate-100"></i>
               </button>
             </div>
 
