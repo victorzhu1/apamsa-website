@@ -6,7 +6,7 @@ export default function Footer() {
   const [subscribed, setSubscribed] = useState(false);
 
   
-
+ 
   const handleInputChange = (e: { target: { value: SetStateAction<string>; }; }) => {
     setEmail(e.target.value);
   };
