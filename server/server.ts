@@ -1,3 +1,5 @@
+const Post = require("./models/PostModel");
+
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();

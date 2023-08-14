@@ -1,24 +1,33 @@
+import mongoose, { Schema, Document } from "mongoose";
 
-const postSchema = mongoose.Schema(
-    {
-        title: {
-            type: String,
-            required: [true, "Enter post title:"],
-        },
-        body: {
-            type: String,
-            required: [true, "Enter post body:"],
-        },
-        date: {
-            type: String,
-            required: [true, "Enter post date:"],
-        }
+interface IPost extends Document {
+  title: string;
+  body: string;
+  date: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+const postSchema: Schema = new Schema(
+  {
+    title: {
+      type: String,
+      required: true,
     },
-    {
-        timestamps: true
-    }
-)
+    body: {
+      type: String,
+      required: true,
+    },
+    date: {
+      type: String,
+      required: true,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
 
-const Post = mongoose.model("Post", postSchema);
+const Post = mongoose.model<IPost>("Post", postSchema);
 
 module.exports = Post;
