@@ -1,23 +1,34 @@
 import { SetStateAction, useState } from "react";
+import axios from "axios";
 
 export default function Footer() {
+
+  interface NewsletterSub {
+    email: string;
+  }
 
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
 
-  
+  const apiUrl = process.env.REACT_APP_API_URL;
+
  
   const handleInputChange = (e: { target: { value: SetStateAction<string>; }; }) => {
     setEmail(e.target.value);
   };
 
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    //send email to server
-    console.log('Email:', email);
+    const data: NewsletterSub = { email };
+
+    axios.post(`${apiUrl}/subscribe`, data).then((response) => {
+      console.log("Subscription successful");
+    });
+
     setSubscribed(true);
     setEmail('');
   };
+
   
   return (
     <footer className='footer-container w-screen md:px-32 lg:px-64 py-8 pb-16 md:py-16 bg-slate-700 text-white font-oswald'>
