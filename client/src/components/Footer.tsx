@@ -3,6 +3,9 @@ import { SetStateAction, useState } from "react";
 export default function Footer() {
 
   const [email, setEmail] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
+
+  
 
   const handleInputChange = (e: { target: { value: SetStateAction<string>; }; }) => {
     setEmail(e.target.value);
@@ -12,6 +15,7 @@ export default function Footer() {
     e.preventDefault();
     //send email to server
     console.log('Email:', email);
+    setSubscribed(true);
     setEmail('');
   };
   
@@ -31,17 +35,21 @@ export default function Footer() {
                       value={email}
                       onChange={handleInputChange}
                       placeholder='your-email@upenn.edu'
-                      className='border border-gray-300 px-2 py-1 mr-2 text-slate-800'
+                      className='border border-gray-300 px-2 py-1 mr-2 rounded-none text-slate-800'
                     />
                     <button
-                      type='submit'
-                      className='bg-slate-500 text-white px-4 py-2 transition duration-200 hover:bg-slate-400 '
-                    >
-                      SUBMIT
-                    </button>
+                    type='submit'
+                    className={`bg-slate-500 text-white px-4 py-2 transition duration-200 hover:bg-slate-400 ${
+                      subscribed ? 'cursor-default' : 'hover:bg-slate-400'
+                    }`}
+                    disabled={subscribed}
+                  >
+                    {subscribed ? 'SUBSCRIBED!' : 'SUBMIT'}
+                  </button>
                   </form>
                 </div>
             </div>
+
             <div className='footer-links'>
                 <h1 className='font-semibold mb-2'>OUR LINKS</h1>
                 <div className='socials-container flex flex-row justify-between space-x-2'>
