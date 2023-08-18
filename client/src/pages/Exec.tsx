@@ -51,9 +51,9 @@ export function Exec() {
             <div className='exec-content-top mt-12 w-full flex flex-row justify-evenly'>
                 <div className='card w-40 h-60 md:w-60 md:h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
                 onClick={() => handleMemberButtonClick('a')}>
-                    <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                    <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                     style={{
-                        backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                        backgroundImage: `url(${'/images/exec-headshots/hkim.jpeg'})`,
                     }}>
                         <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
                             <h1 className='inline-block text-lg'>HAYLE KIM</h1>
@@ -64,9 +64,9 @@ export function Exec() {
 
                 <div className='card w-40 h-60 md:w-60 md:h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
                 onClick={() => handleMemberButtonClick('b')}>
-                    <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                    <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                     style={{
-                        backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                        backgroundImage: `url(${'/images/exec-headshots/sliang.jpeg'})`,
                     }}>
                         <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
                             <h1 className='inline-block text-lg'>STACY LIANG</h1>
@@ -80,52 +80,52 @@ export function Exec() {
                 <div className='exec-content-bottom my-12 w-full flex flex-row justify-evenly'>
                     <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
                     onClick={() => handleMemberButtonClick('b')}>
-                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                         style={{
-                            backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                            backgroundImage: `url(${'/images/exec-headshots/jren.jpeg'})`,
                         }}>
                             <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
-                                <h1 className='inline-block text-lg'>STACY LIANG</h1>
-                                <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                                <h1 className='inline-block text-lg'>JEFF REN</h1>
+                                <h2 className='inline-block text-md'>VP INTERNAL</h2>
                             </div>
                         </div>
                     </div>
 
                     <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
                     onClick={() => handleMemberButtonClick('b')}>
-                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                         style={{
-                            backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                            backgroundImage: `url(${'/images/exec-headshots/jchen.jpeg'})`,
                         }}>
                             <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
-                                <h1 className='inline-block text-lg'>STACY LIANG</h1>
-                                <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                                <h1 className='inline-block text-lg'>JOEY CHEN</h1>
+                                <h2 className='inline-block text-md'>VP EXTERNAL</h2>
                             </div>
                         </div>
                     </div>
 
                     <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
                     onClick={() => handleMemberButtonClick('b')}>
-                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                         style={{
-                            backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                            backgroundImage: `url(${'/images/exec-headshots/cbatulzii.jpeg'})`,
                         }}>
                             <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
-                                <h1 className='inline-block text-lg'>STACY LIANG</h1>
-                                <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                                <h1 className='inline-block text-lg'>CINDY BATULZII</h1>
+                                <h2 className='inline-block text-md'>VP MARKETING</h2>
                             </div>
                         </div>
                     </div>
 
                     <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
                     onClick={() => handleMemberButtonClick('b')}>
-                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                         style={{
-                            backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                            backgroundImage: `url(${'/images/exec-headshots/axia.jpeg'})`,
                         }}>
                             <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
-                                <h1 className='inline-block text-lg'>STACY LIANG</h1>
-                                <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                                <h1 className='inline-block text-lg'>ANNIE XIA</h1>
+                                <h2 className='inline-block text-md'>VP FINANCE</h2>
                             </div>
                         </div>
                     </div>
@@ -137,7 +137,7 @@ export function Exec() {
                 <div className='exec-content-middle mt-6 w-full flex flex-row justify-evenly'>
                     <div className='card w-40 h-60 md:w-60 md:h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
                     onClick={() => handleMemberButtonClick('b')}>
-                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                         style={{
                             backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
                         }}>
@@ -150,7 +150,7 @@ export function Exec() {
 
                     <div className='card w-40 h-60 md:w-60 md:h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
                     onClick={() => handleMemberButtonClick('b')}>
-                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                         style={{
                             backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
                         }}>
@@ -165,7 +165,7 @@ export function Exec() {
                 <div className='exec-content-bottom my-6 w-full flex flex-row justify-evenly'>
                     <div className='card w-40 h-60 md:w-60 md:h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
                     onClick={() => handleMemberButtonClick('b')}>
-                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                         style={{
                             backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
                         }}>
@@ -178,7 +178,7 @@ export function Exec() {
 
                     <div className='card w-40 h-60 md:w-60 md:h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
                     onClick={() => handleMemberButtonClick('b')}>
-                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end'
+                        <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                         style={{
                             backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
                         }}>
