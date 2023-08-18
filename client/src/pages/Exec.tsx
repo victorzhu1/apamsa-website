@@ -139,11 +139,11 @@ export function Exec() {
                     onClick={() => handleMemberButtonClick('b')}>
                         <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                         style={{
-                            backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                            backgroundImage: `url(${'/images/exec-headshots/jren.jpeg'})`,
                         }}>
                             <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
-                                <h1 className='inline-block text-lg'>STACY LIANG</h1>
-                                <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                                <h1 className='inline-block text-lg'>JEFF REN</h1>
+                                <h2 className='inline-block text-md'>VP INTERNAL</h2>
                             </div>
                         </div>
                     </div>
@@ -152,11 +152,11 @@ export function Exec() {
                     onClick={() => handleMemberButtonClick('b')}>
                         <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                         style={{
-                            backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                            backgroundImage: `url(${'/images/exec-headshots/jchen.jpeg'})`,
                         }}>
                             <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
-                                <h1 className='inline-block text-lg'>STACY LIANG</h1>
-                                <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                                <h1 className='inline-block text-lg'>JOEY CHEN</h1>
+                                <h2 className='inline-block text-md'>VP EXTERNAL</h2>
                             </div>
                         </div>
                     </div>
@@ -167,11 +167,11 @@ export function Exec() {
                     onClick={() => handleMemberButtonClick('b')}>
                         <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                         style={{
-                            backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                            backgroundImage: `url(${'/images/exec-headshots/cbatulzii.jpeg'})`,
                         }}>
                             <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
-                                <h1 className='inline-block text-lg'>STACY LIANG</h1>
-                                <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                                <h1 className='inline-block text-lg'>CINDY BATULZII</h1>
+                                <h2 className='inline-block text-md'>VP MARKETING</h2>
                             </div>
                         </div>
                     </div>
@@ -180,11 +180,11 @@ export function Exec() {
                     onClick={() => handleMemberButtonClick('b')}>
                         <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                         style={{
-                            backgroundImage: `url(${'/images/exec/headshottest.jpg'})`,
+                            backgroundImage: `url(${'/images/exec-headshots/axia.jpeg'})`,
                         }}>
                             <div className='card-text w-full h-16 flex flex-col justify-center bg-slate-800 bg-opacity-50 rounded-b text-white text-center '>
-                                <h1 className='inline-block text-lg'>STACY LIANG</h1>
-                                <h2 className='inline-block text-md'>CO-PRESIDENT</h2>
+                                <h1 className='inline-block text-lg'>ANNIE XIA</h1>
+                                <h2 className='inline-block text-md'>VP FINANCE</h2>
                             </div>
                         </div>
                     </div>
