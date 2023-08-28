@@ -1,26 +1,17 @@
-import mongoose, { Schema, Document } from 'mongoose';
+const mongoose = require("mongoose");
 
-export interface INewsletterSub extends Document {
-    email: string;
-    createdAt: Date;
-    updatedAt: Date;
-}
-
-const newsletterSubSchema: Schema = new Schema(
+const newsletterSubSchema = mongoose.Schema(
     {
         email: {
             type: String,
-            required: true,
-            unique: true,
-            trim: true,
-            lowercase: true
-        }
+            required: [true, "Email is required"],
+        },
     },
     {
         timestamps: true
     }
 );
 
-const NewsletterSub = mongoose.model<INewsletterSub>("NewsletterSub", newsletterSubSchema);
+const NewsletterSub = mongoose.model("NewsletterSub", newsletterSubSchema);
 
 module.exports = NewsletterSub;
