@@ -2,6 +2,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik"
 import * as Yup from "yup"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
+import { useState } from "react";
 
 
 const apiUrl = process.env.REACT_APP_API_URL;
@@ -20,12 +21,25 @@ export function Login() {
         username: "",
         password: "",
     }
+    const [loginError, setLoginError] = useState("");
 
     const onSubmitA = (data: User) => {
-        axios.post(`${apiUrl}/announcements`, data).then((response) => {
-          navigate("/events");
-        });
-      };
+        axios.post(`${apiUrl}/auth/login`, data)
+            .then((response) => {
+                if (response.data === "Login Successful") {
+                    navigate("/create");
+                } else {
+                    setLoginError("Incorrect Username/Password Combination");
+                }
+            })
+            .catch((error) => {
+                if (error.response) {
+                    setLoginError(error.response.data.error);
+                } else {
+                    setLoginError("An error occurred during login.");
+                }
+            });
+    };
 
 
     const validationSchemaA = Yup.object().shape({
@@ -57,6 +71,7 @@ export function Login() {
                         <button type = "submit" className="mt-4 px-4 py-2 text-white bg-slate-800 font-semibold hover:bg-opacity-75 transition duration-200"> Log in </button>
                     </Form>
                 </Formik>
+                {loginError && <p className="text-red-500 mt-2">{loginError}</p>}
             </div>
         </div>
     )

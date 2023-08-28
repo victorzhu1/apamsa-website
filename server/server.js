@@ -1,9 +1,14 @@
 const Post = require("./models/PostModel");
 const NewsletterSub = require("./models/NewsletterSub");
+const User = require("./models/User");
+
 
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require('cors');
+const bcrypt = require('bcrypt');
+const {sign} = require('jsonwebtoken');
+
 require('dotenv').config();
 
 
@@ -57,6 +62,55 @@ app.post('/subscribe', async (req, res) => {
         res.status(500).json({message: error.message});
     }
 })
+
+app.get('/auth', async (req, res) => {
+    try {
+        const users = await User.find({});
+        res.status(200).json(users);
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+})
+
+app.post('/auth', async (req, res) => {
+    try {
+        const { username, password } = req.body;
+        const hash = await bcrypt.hash(password, 10);
+        await User.create({
+            username: username,
+            password: hash,
+        });
+        res.status(200).json({ username: username });
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).json({ message: error.message });
+    }
+});
+
+
+app.post('/auth/login', async (req, res) => {
+    try {
+        const { username, password } = req.body;
+        const user = await User.findOne({ username: username });
+
+        if (!user) {
+            res.json({ error: "User Doesn't Exist" });
+            return;
+        }
+
+        const match = await bcrypt.compare(password, user.password);
+        if (!match) {
+            res.json({ error: "Incorrect Username/Password Combination" });
+            return;
+        }
+
+        res.json("Login Successful");
+
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).json({ message: error.message });
+    }
+});
 
 
 mongoose.set("strictQuery", false);
