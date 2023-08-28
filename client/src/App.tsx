@@ -8,6 +8,7 @@ import { CourseSearch } from './pages/CourseSearch';
 import { Resources } from './pages/Resources';
 import { Exec } from './pages/Exec';
 import { CreatePost } from './pages/CreatePost';
+import { Login } from './pages/Login';
 import { Join } from './pages/Join';
 import { Gallery } from './pages/Gallery';
 
@@ -23,9 +24,12 @@ function App() {
           <Route path='/exec' element={<Exec />} />
           <Route path='/gallery' element={<Gallery />} />
           <Route path='/events' element={<Events />} />
-          <Route path='/coursesearch' element={<CourseSearch />} />
+          {/* <Route path='/coursesearch' element={<CourseSearch />} /> */}
           <Route path='/resources' element={<Resources />} />
           <Route path='/create' element={<CreatePost />} />
+          <Route path='/login' element={<Login />} />
+
+
           <Route path='/join' element={<Join />} />
         </Routes>
       </div>

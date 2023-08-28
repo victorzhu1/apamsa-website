@@ -2,13 +2,14 @@ const Post = require("./models/PostModel");
 
 const express = require("express");
 const mongoose = require("mongoose");
-const app = express();
 const cors = require('cors');
 require('dotenv').config();
 
 
 const databaseUrl = process.env.DATABASE_URL;
 const PORT = process.env.PORT;
+
+const app = express();
 
 app.use(cors());
 app.use(express.json());

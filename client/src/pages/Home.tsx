@@ -29,9 +29,9 @@ export function Home () {
       };
 
     const pillarData: { [key: string]: string } = {
-        outreach: 'Filler text for Outreach section!',
-        professional: 'Filler text for Professional Development section.',
-        community: 'Filler text for Community section.',
+        outreach: 'We are committed to actively engaging with the broader community through educational initiatives, health awareness campaigns, and collaborative events, promoting a greater understanding of healthcare while fostering meaningful connections. We’ve collaborated with Be the Match, OCA - Asian American Advocates, and other local Philadelphia Organizations.',
+        professional: 'We foster the professional development of our members by offering workshops, mentorship opportunities, and resources that enhance their pre-medical journey, equipping them with the skills and insights needed to excel in the medical field.',
+        community: 'We create a tight-knit and inclusive community that provides a supportive network, fosters lasting friendships, and encourages the sharing of diverse experiences, all of which contribute to a rich and fulfilling Pre-Medical education at UPenn. Check out the "Join" page to get involved!',
     };
 
     const handlePillarButtonClick = (pillar: string) => {
@@ -101,18 +101,18 @@ export function Home () {
                     <div className="chapter-info-text md:w-1/3 md:flex flex-col md:ml-24 lg:ml-32 text-center">
                         <h1 className="text-slate-900 inline-block text-4xl md:text-5xl font-bold mb-4 md:mb-16 px-12 py-3
                          bg-white border-4 border-slate-800">OUR CHAPTER</h1>
-                        <p className="text-xl">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
+                        <p className="text-xl md:text-2xl">
+                            UPenn Pre-Med APAMSA is the first of its kind at our university. 
+                            Uniting diverse backgrounds and a shared passion for medicine, we provide resources, workshops, and events. 
+                            Join us in shaping the future of healthcare while celebrating the richness of Asian cultures!
                         </p>
                     </div>
                 </div>
                 <div className="mission-info-container bg-slate-500 py-16 flex flex-col text-center text-white">
                     <h1 className="text-4xl md:text-6xl font-bold mb-8"> OUR MISSION </h1>
-                    <p className="w-2/3 md:w-1/2 mx-auto text-lg md:text-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.
+                    <p className="w-2/3 md:w-1/2 mx-auto text-lg md:text-3xl">
+                        Empowering UPenn's Pre-Med students of AANHPI heritage through professional development, 
+                        community building, and outreach, while celebrating diversity within the field of medicine.
                     </p>
                 </div>
             </div>
@@ -188,7 +188,7 @@ export function Home () {
                 <div className='mb-4 px-4 py-12 mx-auto'>
                     <div className='dropdown-text-container mx-4 md:mx-16'>
                         <h1 className='text-slate-900 text-3xl font-bold mb-4'>{pillarHeaders[selectedPillar]}</h1>
-                        <p className='text-slate-800'>{pillarData[selectedPillar]}</p>
+                        <p className='text-slate-800 md:text-2xl'>{pillarData[selectedPillar]}</p>
                         <button
                             className='mt-4 px-4 py-2 text-white bg-slate-800 font-semibold hover:bg-opacity-75 transition duration-200'
                             onClick={handleCloseButtonClick}

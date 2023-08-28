@@ -41,13 +41,13 @@ export function CreatePost() {
     return (
         <div className="create-post-page h-full w-screen flex flex-col items-center justify-center font-oswald">
             <div className='create-header w-full bg-slate-700 flex justify-center md:justify-start text-center'>
-                <div className='exec-text-container mt-36 mb-4 md:ml-32'>
+                <div className='create-text-container mt-36 mb-4 md:ml-32'>
                     <h1 className='text-6xl text-white'>
                         CREATE A POST
                     </h1>
                 </div>
             </div>
-            <div className="create-container w-1/3 my-16 p-8 text-center border-4 border-slate-800">
+            <div className="create-container w-3/4 md:w-1/3 my-16 p-8 text-center border-4 border-slate-800">
                 <Formik initialValues = {initialValues} onSubmit = {onSubmitA} validationSchema = {validationSchemaA}>
                     <Form className="formContainer flex flex-col">
                         <label className="text-3xl mb-2"> Title: </label>

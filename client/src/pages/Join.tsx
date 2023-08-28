@@ -27,11 +27,10 @@ export function Join() {
                     border-2 border-slate-800">
                         <h1 className="text-slate-900 font-bold text-2xl md:text-5xl mb-2">Interested in joining?</h1>
                         <p className="text-md md:text-xl mb-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
+                            Fill out the membership application by September 15th to officially join UPenn APAMSA! 
+                            We can't wait to read your responses and get to know you all!
                         </p>
-                        <a role="button" href="https://www.google.com" target="_blank" rel="noreferrer" 
+                        <a role="button" href="https://forms.gle/WPNetKsz1cNqro9c6" target="_blank" rel="noreferrer" 
                         className="inline-block md:w-2/3 border-2 border-slate-800 cursor-pointer px-4 py-3 
                         text-center text-md font-semibold uppercase text-slate-800 transition duration-200 ease-in-out 
                         hover:bg-opacity-25 hover:bg-slate-900">

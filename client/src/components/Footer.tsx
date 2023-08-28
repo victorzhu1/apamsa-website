@@ -34,7 +34,9 @@ export default function Footer() {
     <footer className='footer-container w-screen md:px-32 lg:px-64 py-8 pb-16 md:py-16 bg-slate-700 text-white font-oswald'>
         <div className='flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0'>
             <div className='logo-container flex flex-col items-center justify-center'>
-              <img src="/images/image-logo-small.jpg" className="h-16" alt="Logo" />
+              <a href="/" className="flex items-center rounded-md p-2">
+                <img src="/images/image-logo-small.jpg" className="h-14" alt="Logo" />
+              </a>
               <h1 className="text-center">UPENN APAMSA</h1>
             </div>
             <div className='footer-newsletter'>
@@ -64,7 +66,7 @@ export default function Footer() {
             <div className='footer-links'>
                 <h1 className='font-semibold mb-2'>OUR LINKS</h1>
                 <div className='socials-container flex flex-row justify-between space-x-2'>
-                  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.instagram.com/upennpremedapamsa/" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-instagram text-4xl transition duration-200 hover:text-slate-400"></i>
                   </a>
                   <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">
