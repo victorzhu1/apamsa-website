@@ -30,7 +30,7 @@ export function Home () {
 
     const pillarData: { [key: string]: string } = {
         outreach: 'We are committed to actively engaging with the broader community through educational initiatives, health awareness campaigns, and collaborative events, promoting a greater understanding of healthcare while fostering meaningful connections. We’ve collaborated with Be the Match, OCA - Asian American Advocates, and other local Philadelphia Organizations.',
-        professional: 'We foster the professional development of our members by offering workshops, mentorship opportunities, and resources that enhance their pre-medical journey, equipping them with the skills and insights needed to excel in the medical field.',
+        professional: 'We foster the professional development of our members by offering workshops, mentorship opportunities, and resources that enhance their pre-medical journey, equipping them with the skills and insights needed to excel in the medical field. Stay tuned for many exciting opportunities to come this year!',
         community: 'We create a tight-knit and inclusive community that provides a supportive network, fosters lasting friendships, and encourages the sharing of diverse experiences, all of which contribute to a rich and fulfilling Pre-Medical education at UPenn. Check out the "Join" page to get involved!',
     };
 

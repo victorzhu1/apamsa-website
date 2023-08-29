@@ -11,12 +11,18 @@ export function Exec() {
         a: 'HAYLE KIM',
         b: 'STACY LIANG',
         c: 'JEFF REN',
+        d: 'JOEY CHEN',
+        e: 'CINDY BATULZII',
+        f: "ANNIE XIA"
     };
 
     const memberInfo: { [key: string]: string } = {
-        a: 'Filler text for Hayle Kim.',
-        b: 'Filler text for Stacy Liang.',
-        c: 'Filler text for Jeff Ren.',
+        a: 'Hayle is a junior studying Neuroscience and minoring in Chemistry from Knoxville, Tennessee. <br> <br> In her free time, she enjoys grocery shopping and baking!',
+        b: 'Stacy is a junior studying Health and Societies and Biology, with a minor in Chemistry. <br> <br> From the Philly suburbs, she loves dancing, eating good food, and spending too much time on her phone.',
+        c: 'Jeff is a sophomore from Northville, MI studying biology. <br> <br> He enjoys working out from judo and the gym, and gaming, reading, and partying in spare time.',
+        d: 'Joey is a sophomore studying Biology and minoring in Healthcare Management from Philly. <br> <br> In her free time, she enjoys cooking and exploring the city.',
+        e: 'Cindy is a junior from Highland Park, IL. She majors in Neuroscience and is minoring in Chemistry and Healthcare Management. <br> <br> She loves singing, hanging out with friends, and trying new food.',
+        f: 'Annie is a junior from Cincinnati, OH studying Biology with a minor in Chemistry. <br> <br> She cooks and loves working on creative writing in her free time.'
     };
 
     const handleMemberButtonClick = (member: string) => {
@@ -79,7 +85,7 @@ export function Exec() {
             <div className='exec-content-lg hidden md:block w-full'>
                 <div className='exec-content-bottom my-12 w-full flex flex-row justify-evenly'>
                     <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
-                    onClick={() => handleMemberButtonClick('b')}>
+                    onClick={() => handleMemberButtonClick('c')}>
                         <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                         style={{
                             backgroundImage: `url(${'/images/exec-headshots/jren.jpeg'})`,
@@ -92,7 +98,7 @@ export function Exec() {
                     </div>
 
                     <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
-                    onClick={() => handleMemberButtonClick('b')}>
+                    onClick={() => handleMemberButtonClick('d')}>
                         <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                         style={{
                             backgroundImage: `url(${'/images/exec-headshots/jchen.jpeg'})`,
@@ -105,7 +111,7 @@ export function Exec() {
                     </div>
 
                     <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
-                    onClick={() => handleMemberButtonClick('b')}>
+                    onClick={() => handleMemberButtonClick('e')}>
                         <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                         style={{
                             backgroundImage: `url(${'/images/exec-headshots/cbatulzii.jpeg'})`,
@@ -118,7 +124,7 @@ export function Exec() {
                     </div>
 
                     <div className='card w-60 h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
-                    onClick={() => handleMemberButtonClick('b')}>
+                    onClick={() => handleMemberButtonClick('f')}>
                         <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                         style={{
                             backgroundImage: `url(${'/images/exec-headshots/axia.jpeg'})`,
@@ -199,7 +205,7 @@ export function Exec() {
                 <div className='mb-4 px-4 py-12 mx-auto'>
                     <div className='dropdown-text-container mx-4 md:mx-16'>
                         <h1 className='text-slate-900 text-3xl font-bold mb-4'>{memberNames[selectedMember]}</h1>
-                        <p className='text-slate-800'>{memberInfo[selectedMember]}</p>
+                        <p className='text-slate-800 md:text-lg'   dangerouslySetInnerHTML={{ __html: memberInfo[selectedMember] }}></p>
                         <button
                             className='mt-4 px-4 py-2 text-white bg-slate-800 font-semibold hover:bg-opacity-75 transition duration-200'
                             onClick={handleCloseButtonClick}

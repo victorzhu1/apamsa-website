@@ -12,7 +12,7 @@ export function Overview() {
             <div className='overview-content py-4 md:py-8 flex flex-col'>
 
                 <div className='overview-section flex flex-col md:flex-row align-items-center justify-center py-8'>
-                    <img src="/images/overview-1-square.jpg" alt="pic" className="rounded-full shadow hidden md:block"
+                    <img src="/images/overview-apamsa.jpeg" alt="pic" className="rounded-full shadow hidden md:block"
                         style={{
                             objectFit: 'cover',
                             width: '35%',
@@ -30,9 +30,9 @@ export function Overview() {
                     <div className="overview-section-text w-3/4 md:w-1/3 flex flex-col md:ml-32 text-center">
                         <h1 className="text-slate-900 inline-block text-3xl lg:text-5xl font-bold mb-2 md:mb-8 md:px-12 py-3 bg-white border-4 border-slate-800">APAMSA NATIONWIDE</h1>
                         <p className="text-lg md:text-xl mb-3 md:mb-8">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
+                            APAMSA serves as a forum for student leaders to engage health issues and develop initiatives and projects addressing needs. 
+                            The local, regional, and national activities of APAMSA aim to promote the health of the AANHPI community and help healthcare workers understand 
+                            how to care for AANHPI patients in a culturally sensitive manner.
                         </p>
                         <a role="button" href="https://www.apamsa.org" target="_blank" className="inline-block border-2 border-slate-800 cursor-pointer px-2 md:px-4 py-3 
                         text-center text-md font-semibold uppercase text-slate-800 transition duration-200 ease-in-out 
@@ -46,9 +46,8 @@ export function Overview() {
                     <div className="overview-section-text w-3/4 md:w-1/3 flex flex-col md:mr-32 text-center">
                         <h1 className="text-slate-900 inline-block text-3xl lg:text-5xl font-bold mb-2 md:mb-8 md:px-12 py-3 bg-white border-4 border-slate-800">APAMSA AT UPENN</h1>
                         <p className="text-lg md:text-xl">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
+                        UPenn Pre-Med APAMSA is the First AANHPI Pre-Medical Club at the University of Pennsylvania and the sixth Pre-Med division of APAMSA in the nation. 
+                        Through our three pillars of Community, Professional Development, and Outreach, we create a supportive environment for aspiring AANHPI physicians.
                         </p>
                     </div>
                     <img src="/images/overview-1-square.jpg" alt="pic" className="rounded-full shadow hidden md:block"
