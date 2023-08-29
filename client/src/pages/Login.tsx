@@ -69,7 +69,7 @@ export function Login() {
 
                         <label className="text-3xl mb-2"> Password: </label>
                         <ErrorMessage name = "password" component="span"/>
-                        <Field id="inputLogin" name="password" className="border-2 p-2 mb-4"/>
+                        <Field id="inputLogin" name="password" type="password" className="border-2 p-2 mb-4"/>
 
                         <button type = "submit" className="mt-4 px-4 py-2 text-white bg-slate-800 font-semibold hover:bg-opacity-75 transition duration-200"> Log in </button>
                     </Form>
