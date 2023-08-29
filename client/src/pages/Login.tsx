@@ -4,9 +4,7 @@ import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import { useState } from "react";
 
-
 const apiUrl = process.env.REACT_APP_API_URL;
-
 
 export function Login() {
 
@@ -21,13 +19,18 @@ export function Login() {
         username: "",
         password: "",
     }
+
     const [loginError, setLoginError] = useState("");
+
 
     const onSubmitA = (data: User) => {
         axios.post(`${apiUrl}/auth/login`, data)
             .then((response) => {
-                if (response.data === "Login Successful") {
-                    navigate("/create");
+                const { accessToken } = response.data;
+                
+                if (accessToken) {
+                    sessionStorage.setItem('accessToken', accessToken);
+                    navigate('/create');
                 } else {
                     setLoginError("Incorrect Username/Password Combination");
                 }

@@ -2,12 +2,14 @@ const Post = require("./models/PostModel");
 const NewsletterSub = require("./models/NewsletterSub");
 const User = require("./models/User");
 
-
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require('cors');
 const bcrypt = require('bcrypt');
-const {sign} = require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
+// const secretKey = process.env.DATABASE_URL;
+
+const secretKey ='apamsasecretwebsitekey';
 
 require('dotenv').config();
 
@@ -103,8 +105,9 @@ app.post('/auth/login', async (req, res) => {
             res.json({ error: "Incorrect Username/Password Combination" });
             return;
         }
-
-        res.json("Login Successful");
+        
+        const accessToken = jwt.sign({ userId: user._id }, secretKey, { expiresIn: '1h' });
+        res.json({ accessToken });
 
     } catch (error) {
         console.log(error.message);

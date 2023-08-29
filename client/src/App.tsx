@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { Home } from './pages/Home';
@@ -11,9 +11,18 @@ import { CreatePost } from './pages/CreatePost';
 import { Login } from './pages/Login';
 import { Join } from './pages/Join';
 import { Gallery } from './pages/Gallery';
+import { ProtectedRoute } from './pages/ProtectedRoute';
+import jwt_decode from 'jwt-decode';
+
+
 
 
 function App() {
+
+  // const accessToken = localStorage.getItem('accessToken');
+  // const decodedToken: { exp: number } | null = accessToken ? jwt_decode(accessToken) : null;
+  // const isAuthenticated: boolean = decodedToken ? new Date().getTime() / 1000 < decodedToken.exp : false;
+
   return (
     <>
       <Navbar/>
@@ -24,12 +33,9 @@ function App() {
           <Route path='/exec' element={<Exec />} />
           <Route path='/gallery' element={<Gallery />} />
           <Route path='/events' element={<Events />} />
-          {/* <Route path='/coursesearch' element={<CourseSearch />} /> */}
           <Route path='/resources' element={<Resources />} />
-          <Route path='/create' element={<CreatePost />} />
+          <Route path="/create" element={<ProtectedRoute component={CreatePost} />} />
           <Route path='/login' element={<Login />} />
-
-
           <Route path='/join' element={<Join />} />
         </Routes>
       </div>
