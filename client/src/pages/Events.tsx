@@ -17,7 +17,6 @@ export function Events() {
     const accessToken = sessionStorage.getItem("accessToken");
     const isAuthenticated = accessToken ? true : false;
 
-
     const [listOfPosts, setListOfPosts] = useState<Post[]>([]);
     const [currentPage, setCurrentPage] = useState(0);
     const [loading, setLoading] = useState(true);
