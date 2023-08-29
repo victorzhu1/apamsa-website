@@ -142,7 +142,7 @@ export function Exec() {
             <div className='exec-content-mobile md:hidden w-full'>
                 <div className='exec-content-middle mt-6 w-full flex flex-row justify-evenly'>
                     <div className='card w-40 h-60 md:w-60 md:h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
-                    onClick={() => handleMemberButtonClick('b')}>
+                    onClick={() => handleMemberButtonClick('c')}>
                         <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                         style={{
                             backgroundImage: `url(${'/images/exec-headshots/jren.jpeg'})`,
@@ -155,7 +155,7 @@ export function Exec() {
                     </div>
 
                     <div className='card w-40 h-60 md:w-60 md:h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
-                    onClick={() => handleMemberButtonClick('b')}>
+                    onClick={() => handleMemberButtonClick('d')}>
                         <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                         style={{
                             backgroundImage: `url(${'/images/exec-headshots/jchen.jpeg'})`,
@@ -170,7 +170,7 @@ export function Exec() {
 
                 <div className='exec-content-bottom my-6 w-full flex flex-row justify-evenly'>
                     <div className='card w-40 h-60 md:w-60 md:h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
-                    onClick={() => handleMemberButtonClick('b')}>
+                    onClick={() => handleMemberButtonClick('e')}>
                         <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                         style={{
                             backgroundImage: `url(${'/images/exec-headshots/cbatulzii.jpeg'})`,
@@ -183,7 +183,7 @@ export function Exec() {
                     </div>
 
                     <div className='card w-40 h-60 md:w-60 md:h-80 border-0 bg-cover transition-transform transform-gpu hover:scale-105 cursor-pointer'
-                    onClick={() => handleMemberButtonClick('b')}>
+                    onClick={() => handleMemberButtonClick('f')}>
                         <div className='card-bg w-full h-full rounded bg-cover flex flex-col justify-end shadow'
                         style={{
                             backgroundImage: `url(${'/images/exec-headshots/axia.jpeg'})`,
