@@ -6,18 +6,22 @@ const apiUrl = process.env.REACT_APP_API_URL;
 
 
 interface Post {
-    id: number;
+    _id: string;
     title: string;
     body: string;
     date: string;
   }
 
 export function Events() {
+
+    const accessToken = sessionStorage.getItem("accessToken");
+    const isAuthenticated = accessToken ? true : false;
+
+
     const [listOfPosts, setListOfPosts] = useState<Post[]>([]);
     const [currentPage, setCurrentPage] = useState(0);
-    const postsPerPage = 5;
     const [loading, setLoading] = useState(true);
-
+    const [selectedPost, setSelectedPost] = useState<string | null>(null);
 
     useEffect(() => {
         axios.get<Post[]>(`${apiUrl}/announcements`)
@@ -30,15 +34,30 @@ export function Events() {
         });
     }, []);
 
+
+    const postsPerPage = 5;
+    const startIndex = currentPage * postsPerPage;
+    const endIndex = startIndex + postsPerPage;
+    const currentPosts = listOfPosts.slice().reverse().slice(startIndex, endIndex);
+
     const handlePageChange = (selectedPage: { selected: number }) => {
         setCurrentPage(selectedPage.selected);
     };
 
+    const handlePostClick = (postId: string) => {
+        if (isAuthenticated) {
+            setSelectedPost(postId === selectedPost ? null : postId);
+        }
+    };
 
-    const startIndex = currentPage * postsPerPage;
-    const endIndex = startIndex + postsPerPage;
-
-    const currentPosts = listOfPosts.slice().reverse().slice(startIndex, endIndex);
+    const handleDeletePost = async (postId: string) => {
+        try {
+            await axios.delete(`${apiUrl}/announcements/${postId}`);
+            setListOfPosts(prevPosts => prevPosts.filter(post => post._id !== postId));
+        } catch (error) {
+            console.error("Error deleting post:", error);
+        }
+    };
 
     return (
         <div className='events-container h-full w-full flex flex-col items-center justify-center font-oswald'>
@@ -49,8 +68,8 @@ export function Events() {
                     </h1>
                 </div>
             </div>
-            <div className='events-content my-16 w-full flex flex-col justify-normal text-center text-slate-800'>
-                <div className='calendar-container mb-16 w-full flex flex-col items-center'>
+            <div className='events-content my-16 w-full flex flex-col justify-normal text-slate-800'>
+                <div className='calendar-container mb-16 w-full flex flex-col items-center text-center'>
                     <h1 className='mb-8 text-4xl '>
                         CALENDAR
                     </h1>
@@ -71,13 +90,29 @@ export function Events() {
                         <h1 className="mb-4 text-2xl">Loading...</h1>
                     ) : (
                         currentPosts.map((post) => (
-                            <div className="post w-full px-4 py-2 mb-2 border-1 border-gray-400 " key={post.id}>
-                                
+                            <div
+                                className={`post w-full px-4 py-2 mb-2 border-1 border-gray-400 ${
+                                    selectedPost === post._id ? 'selected-post' : ''
+                                }`}
+                                key={post._id}
+                                onClick={() => handlePostClick(post._id)}
+                            >
                                 <div className="text-2xl mb-2">{post.title}</div>
                                 <div className="text-lg mb-1" style={{ wordWrap: "break-word" }}>
                                     {post.body}
                                 </div>
                                 <div className="text-lg">{post.date}</div>
+                                {selectedPost === post._id && (
+                                    <button
+                                        className="delete-button bg-red-500 text-white px-2 py-1 mt-2"
+                                        onClick={(event) => {
+                                            event.stopPropagation();
+                                            handleDeletePost(post._id);
+                                        }}
+                                    >
+                                        DELETE
+                                    </button>
+                                )}
                             </div>
                             ))
                     )}
