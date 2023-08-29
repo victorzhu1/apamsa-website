@@ -84,21 +84,20 @@ export function Events() {
 
                     <div className='announcements-buttons px-4 mt-4 w-screen md:w-full flex flex-row justify-between'
                     >
-                        <div className='paginate-menu md:text-xl '>
+                        <div className='paginate-menu w-screen md:text-xl '>
                             <ReactPaginate
                             previousLabel={"Previous"}
                             nextLabel={"Next"}
                             breakLabel={"..."}
                             pageCount={Math.ceil(listOfPosts.length / postsPerPage)}
-                            marginPagesDisplayed={2}
-                            pageRangeDisplayed={5}
+                            marginPagesDisplayed={1}
+                            pageRangeDisplayed={2}
                             onPageChange={handlePageChange}
                             containerClassName={"pagination flex justify-center space-x-4 list-none"}
                             activeClassName={"bg-slate-400 bg-opacity-50"}
                             pageLinkClassName={"border border-slate-800 px-1"}
                             previousClassName={"border border-slate-800 px-2"}
                             nextClassName={"border border-slate-800 px-2"}
-                                                    
                             />
                         </div>
                         
