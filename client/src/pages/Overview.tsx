@@ -21,7 +21,7 @@ export function Overview() {
 
                     <div className="aspect-w-4 aspect-h-3 px-6 mb-4 md:hidden">
                         <img
-                            src="/images/overview-1.jpg"
+                            src="/images/overview-apamsa.jpeg"
                             alt="pic"
                             className="object-cover shadow"
                         />

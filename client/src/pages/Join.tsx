@@ -27,7 +27,7 @@ export function Join() {
                     border-2 border-slate-800">
                         <h1 className="text-slate-900 font-bold text-2xl md:text-5xl mb-2">Interested in joining?</h1>
                         <p className="text-md md:text-xl mb-2">
-                            Fill out the membership application by September 15th to officially join UPenn APAMSA! 
+                            Fill out the membership application by September 16th to officially join UPenn APAMSA! 
                             We can't wait to read your responses and get to know you all!
                         </p>
                         <a role="button" href="https://forms.gle/WPNetKsz1cNqro9c6" target="_blank" rel="noreferrer" 
