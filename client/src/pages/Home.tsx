@@ -147,7 +147,7 @@ export function Home () {
                         onClick={() => handlePillarButtonClick('professional')}
                         >
                             <img
-                                src='/images/professional-new.jpeg'
+                                src='/images/profdev-new.jpeg'
                                 alt='professional'
                                 className='rounded-full shadow-lg mb-3 transition-transform transform-gpu hover:scale-105 cursor-pointer'
                             />

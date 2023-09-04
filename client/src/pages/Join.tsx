@@ -34,7 +34,7 @@ export function Join() {
                         className="inline-block md:w-2/3 border-2 border-slate-800 cursor-pointer px-4 py-3 
                         text-center text-md font-semibold uppercase text-slate-800 transition duration-200 ease-in-out 
                         hover:bg-opacity-25 hover:bg-slate-900">
-                            Sign up form!
+                            Application!
                         </a>
                     </div>
                 </div>
