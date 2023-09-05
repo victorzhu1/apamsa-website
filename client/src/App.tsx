@@ -12,16 +12,11 @@ import { Login } from './pages/Login';
 import { Join } from './pages/Join';
 import { Gallery } from './pages/Gallery';
 import { ProtectedRoute } from './pages/ProtectedRoute';
-import jwt_decode from 'jwt-decode';
 
 
 
 
 function App() {
-
-  // const accessToken = localStorage.getItem('accessToken');
-  // const decodedToken: { exp: number } | null = accessToken ? jwt_decode(accessToken) : null;
-  // const isAuthenticated: boolean = decodedToken ? new Date().getTime() / 1000 < decodedToken.exp : false;
 
   return (
     <>
